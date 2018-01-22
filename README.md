@@ -8,12 +8,11 @@ Provide a high level overview of what this application is and why you are buildi
 
 ## Getting Started
 What are the steps that a user must take in order to build this app on their own machine and get it running?
-1.
-2.
-3.
-4.
-5.
-
+1. </br>
+2. </br>
+3. </br>
+4. </br>
+5. </br>
 
 ## Example
 ```
@@ -21,9 +20,9 @@ What are the steps that a user must take in order to build this app on their own
 ```
 
 ## Architecture
-This application is created using ASP.NET Core 2.2 Web API applicaiton. 
-Language: C# 
-Libraries: ? ? ?
+This application is created using ASP.NET Core 2.2 Web API applicaiton. </br>
+Language: C# </br>
+Libraries: ? ? ? </br>
 Type of Application: MVC Application
 
 
