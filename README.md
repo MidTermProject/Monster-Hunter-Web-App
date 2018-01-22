@@ -1,6 +1,6 @@
 # Monster Hunter Web App
 
-**Authors:** Your Name(s) Goes Here 
+**Authors:** Andres Ibarra, Jeff Martinez, Zachary Johnson </br>
 **Version:** 1.0.0 
 
 #### Overview
