@@ -32,3 +32,6 @@ This application is created using ASP.NET Core 2.2 Web API applicaiton. </br>
 ## Change Log
 01-21-2018 10:10am - Scaffold Front-End MVC Application </br>
 01-21-2018 00:00am - 
+
+## License
+Licensed under the MIT license.
