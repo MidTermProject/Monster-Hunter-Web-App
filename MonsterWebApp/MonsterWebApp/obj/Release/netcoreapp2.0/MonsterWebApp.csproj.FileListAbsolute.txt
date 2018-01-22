@@ -1,0 +1,11 @@
+C:\Users\nyque\source\repos\Monster-Hunter-Web-App\MonsterWebApp\MonsterWebApp\bin\Release\netcoreapp2.0\MonsterWebApp.deps.json
+C:\Users\nyque\source\repos\Monster-Hunter-Web-App\MonsterWebApp\MonsterWebApp\bin\Release\netcoreapp2.0\MonsterWebApp.runtimeconfig.json
+C:\Users\nyque\source\repos\Monster-Hunter-Web-App\MonsterWebApp\MonsterWebApp\bin\Release\netcoreapp2.0\MonsterWebApp.runtimeconfig.dev.json
+C:\Users\nyque\source\repos\Monster-Hunter-Web-App\MonsterWebApp\MonsterWebApp\bin\Release\netcoreapp2.0\MonsterWebApp.dll
+C:\Users\nyque\source\repos\Monster-Hunter-Web-App\MonsterWebApp\MonsterWebApp\bin\Release\netcoreapp2.0\MonsterWebApp.pdb
+C:\Users\nyque\source\repos\Monster-Hunter-Web-App\MonsterWebApp\MonsterWebApp\obj\Release\netcoreapp2.0\MonsterWebApp.csprojResolveAssemblyReference.cache
+C:\Users\nyque\source\repos\Monster-Hunter-Web-App\MonsterWebApp\MonsterWebApp\obj\Release\netcoreapp2.0\MonsterWebApp.csproj.CoreCompileInputs.cache
+C:\Users\nyque\source\repos\Monster-Hunter-Web-App\MonsterWebApp\MonsterWebApp\obj\Release\netcoreapp2.0\MonsterWebApp.AssemblyInfoInputs.cache
+C:\Users\nyque\source\repos\Monster-Hunter-Web-App\MonsterWebApp\MonsterWebApp\obj\Release\netcoreapp2.0\MonsterWebApp.AssemblyInfo.cs
+C:\Users\nyque\source\repos\Monster-Hunter-Web-App\MonsterWebApp\MonsterWebApp\obj\Release\netcoreapp2.0\MonsterWebApp.dll
+C:\Users\nyque\source\repos\Monster-Hunter-Web-App\MonsterWebApp\MonsterWebApp\obj\Release\netcoreapp2.0\MonsterWebApp.pdb

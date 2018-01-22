@@ -1,0 +1,6 @@
+C:\Users\nyque\source\repos\Monster-Hunter-Web-App\MonsterWebApp\MonsterWebApp
+--output-path=obj\Any CPU\Release\netcoreapp2.0\
+--application-name=MonsterWebApp
+--content-root=C:\Users\nyque\source\repos\Monster-Hunter-Web-App\MonsterWebApp\MonsterWebApp
+--file=C:\Users\nyque\source\repos\Monster-Hunter-Web-App\MonsterWebApp\MonsterWebApp\Views\Home\Index.cshtml
+--file=C:\Users\nyque\source\repos\Monster-Hunter-Web-App\MonsterWebApp\MonsterWebApp\_ViewImports.cshtml
