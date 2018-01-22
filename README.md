@@ -21,10 +21,10 @@ What are the steps that a user must take in order to build this app on their own
 
 ## Architecture
 This application is created using ASP.NET Core 2.2 Web API applicaiton. </br>
-Language: C# </br>
-Libraries: ? ? ? </br>
-Type of Application: MVC Application
+**Language:** C# </br>
+**Libraries:** ? ? ? </br>
+**Type of Application:** MVC Application
 
 
 ## Change Log
-01-21-2018 3:00pm - Added functionality. . . .
+**01-21-2018** 3:00pm - Added functionality. . . .
