@@ -8,13 +8,24 @@ Provide a high level overview of what this application is and why you are buildi
 
 #### Getting Started
 What are the steps that a user must take in order to build this app on their own machine and get it running?
+1.
+2.
+3.
+4.
+5.
+
 
 #### Example
 ```
+
 ```
 
 #### Architecture
-Provide a detailed description of the application design. What technologies (languages, libraries, etc) you're using, and any other relevant design information.
+This application is created using ASP.NET Core 2.2 Web API applicaiton. 
+Language: C# 
+Libraries: ? ? ?
+Type of Application: MVC Application
+
 
 #### Change Log
 01-21-2018 3:00pm - Added functionality. . . .
