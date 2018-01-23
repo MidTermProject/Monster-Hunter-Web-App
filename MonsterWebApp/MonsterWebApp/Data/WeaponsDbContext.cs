@@ -14,7 +14,12 @@ namespace MonsterWebApp.Data
 
         }
 
-        DbSet<Weapons> Weapons { get; set; }
+        public DbSet<Weapons> Weapons { get; set; }
+
+        public DbSet<UserModel> User { get; set; }
+
+        public DbSet<UserWeapons> UserWeapons { get; set; }
+
 
     }
 }

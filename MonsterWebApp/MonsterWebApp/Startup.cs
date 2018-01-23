@@ -26,14 +26,6 @@ namespace MonsterWebApp
         {
             services.AddMvc();
 
-            services.AddDbContext<UserModelDbContext>(
-                options => options.UseSqlServer(
-                    Configuration.GetConnectionString("DefaultConnection")));
-
-            services.AddDbContext<UserWeaponsDbContext>(
-                options => options.UseSqlServer(
-                    Configuration.GetConnectionString("DefaultConnection")));
-
             services.AddDbContext<WeaponsDbContext>(
                 options => options.UseSqlServer(
                     Configuration.GetConnectionString("DefaultConnection")));

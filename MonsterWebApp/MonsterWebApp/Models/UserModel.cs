@@ -7,9 +7,10 @@ using System.Threading.Tasks;
 namespace MonsterWebApp.Models
 {
     public class UserModel
+
     {
         [Required, StringLength(50)]
-        public int UserID { get; set; }
+        public int ID { get; set; }
 
         [Required, StringLength(50)]
         public string UserName { get; set; }
