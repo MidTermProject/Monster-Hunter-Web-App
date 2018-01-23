@@ -20,6 +20,5 @@ namespace MonsterWebApp.Data
 
         public DbSet<UserWeapons> UserWeapons { get; set; }
 
-
     }
 }
