@@ -27,6 +27,10 @@ namespace MonsterWebApp.Controllers
             return View();
         }
 
+        public IActionResult Admin()
+        {
+            return View();
+        }
 
 
         public async Task<IActionResult> GetBlade()
@@ -47,6 +51,5 @@ namespace MonsterWebApp.Controllers
             }
 
         }
-
     }
 }
