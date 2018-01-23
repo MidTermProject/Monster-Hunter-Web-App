@@ -21,6 +21,8 @@ namespace MonsterWebApp.Models
 
         [Required, StringLength(50)]
         public string UserName { get; set; }
-        
+
+
+
     }
 }

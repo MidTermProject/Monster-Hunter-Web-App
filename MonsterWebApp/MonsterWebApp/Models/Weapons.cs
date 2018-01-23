@@ -16,6 +16,6 @@ namespace MonsterWebApp.Models
         [Required, StringLength(25)]
         public string WeaponName { get; set; }
 
-
+   
     }
 }
