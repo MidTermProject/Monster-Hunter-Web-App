@@ -9,11 +9,11 @@ using MonsterWebApp.Data;
 
 namespace MonsterWebApp.Controllers
 {
-    public class HomeController : Controller
+    public class WeaponsController : Controller
     {
         private WeaponsDbContext _context;
 
-        public HomeController(WeaponsDbContext context)
+        public WeaponsController(WeaponsDbContext context)
         {
             _context = context;
         }
@@ -23,9 +23,5 @@ namespace MonsterWebApp.Controllers
         {
             return View();
         }
-
-        //[HttpGet]
-        //public IActionResult 
-        
     }
 }
