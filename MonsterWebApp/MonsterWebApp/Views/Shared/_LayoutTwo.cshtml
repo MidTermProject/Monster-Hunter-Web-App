@@ -5,11 +5,26 @@
     <meta name="viewport" content="width=device-width" />
     <title>@ViewBag.Title</title>
 
-    @* reference the same css file as _layout*@f
+    @* reference the same css file as _layout*@
 </head>
 <body>
+    <div class="container">
+    <header>
+        <ul>
+            <li>LOGO</li>
+            <li>MENU</li>
+            <li>HOME</li>
+            <li>SEARCH</li>            
+        </ul>
+    </header>
+
     <div>
         @RenderBody()
+    </div>
+
+    <footer>
+
+    </footer>
     </div>
 </body>
 </html>

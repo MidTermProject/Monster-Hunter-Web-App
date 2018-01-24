@@ -21,10 +21,6 @@ namespace MonsterWebApp.Controllers
             _context = context;
         }
 
-        public HomeController()
-        {
-        }
-
         // GET: /<controller>/
         public IActionResult Index()
         {
@@ -37,7 +33,7 @@ namespace MonsterWebApp.Controllers
             {
                 // Update port # in the following line.
                 client.BaseAddress = new Uri("http://monsterhunterapi.azurewebsites.net");
-                var response = await client.GetAsync($"/api/blade");
+                var response = await client.GetAsync($"/api/blade/getblades");
                 response.EnsureSuccessStatusCode();
                 var stringResult = await response.Content.ReadAsStringAsync();
                 //deserialized.
