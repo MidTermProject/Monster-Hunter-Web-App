@@ -1,0 +1,43 @@
+﻿@model IEnumerable<MonsterWebApp.Models.WeaponsResult>
+
+
+@foreach (var i in Model)
+{
+    <tr>
+        <td> <img src="@i.ImgUrl" /></td>
+        <br />
+        <td>ID: @i.Id</td>
+        <br />
+        <td>Derived From: @i.Parent</td>
+        <br />
+        <td>Child: @i.HasChild</td>
+        <br />
+        <td>Weapon Class: @i.WeaponClass</td>
+        <br />
+        <td>Name: @i.Name</td>
+        <br />
+        <td>Description: @i.Description</td>
+        <br />
+        <td>Raw Damage: @i.RawDamage</td>
+        <br />
+        <td>Element Type: @i.ElementType</td>
+        <br />
+        <td>Element Damage: @i.ElementDamage</td>
+        <br />
+        <td>Sharpness: @i.Sharpness</td>
+        <br />
+        <td>Rarity: @i.Rarity</td>
+        <br />
+        <td>Affinity: @i.Affinity</td>
+        <br />
+        <td>Slot: @i.Slots</td>
+        <br />
+        <td>Defense: @i.Defense</td>
+        <br />
+        <td>Materials: @i.Materials</td>
+        <br />
+
+        @*<td><a asp-action="Update" asp-controller="Home" asp-route-id="@i.ID">Update</a></td>*@
+    </tr>
+
+}
