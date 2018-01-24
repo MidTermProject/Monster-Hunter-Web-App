@@ -21,13 +21,15 @@ namespace MonsterWebApp.Controllers
             _context = context;
         }
 
+        public HomeController()
+        {
+        }
+
         // GET: /<controller>/
         public IActionResult Index()
         {
             return View();
         }
-
-
 
         public async Task<IActionResult> GetBlade()
         {
@@ -40,7 +42,6 @@ namespace MonsterWebApp.Controllers
                 var stringResult = await response.Content.ReadAsStringAsync();
                 //deserialized.
                 var deserialized = WeaponsResult.FromJson(stringResult);
-                
 
                 return View(deserialized);
 
