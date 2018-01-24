@@ -1,21 +1,22 @@
 ﻿@model IEnumerable<MonsterWebApp.Models.WeaponsResult>
 
-
 @foreach (var i in Model)
 {
 <tr>
-    <td>@i.Name</td>
-    <td>@i.Parent</td>
-    <td>@i.WeaponClass</td>
-    <td>@i.Rarity</td>
-    <td>@i.Sharpness</td>
-    <td>@i.RawDamage</td>
-    <td>@i.Affinity</td>
-    <td>@i.Defense</td>
-    <td>@i.Description</td>
-    <td>@i.ElementDamage</td>
-    <td>@i.ElementType</td>
-    <td>@i.HasChild</td>
+    <td>Weapon Name: @i.Name</td><br />
+    <td>Derived From: @i.Parent</td><br />
+    <td>Weapon Class: @i.WeaponClass</td><br />
+    <td>Rarity: @i.Rarity</td><br />
+    <td>Sharpness: @i.Sharpness</td><br /> 
+    <td>Raw Damage: @i.RawDamage</td><br /> 
+    <td>Affinity: @i.Affinity</td><br />
+    <td>Defense: @i.Defense</td><br />
+    <td>Description: @i.Description</td><br />
+    <td>Element Damange: @i.ElementDamage</td><br />
+    <td>Element Type: @i.ElementType</td><br />
+    <td>Can Evolve: @i.HasChild</td><br />
+    <td>Slot: @i.Slots</td><br />
+
     @*<td><a asp-action="Update" asp-controller="Home" asp-route-id="@i.ID">Update</a></td>*@
 </tr>
 

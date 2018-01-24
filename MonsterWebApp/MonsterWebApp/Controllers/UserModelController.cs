@@ -19,7 +19,7 @@ namespace MonsterWebApp.Controllers
         }
 
         // GET: /<controller>/
-        public IActionResult Index()
+        public IActionResult UserSignUp()
         {
             return View();
         }
