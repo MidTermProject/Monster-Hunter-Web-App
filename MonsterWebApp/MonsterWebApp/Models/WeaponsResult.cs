@@ -7,14 +7,13 @@ using Newtonsoft.Json;
 
 namespace MonsterWebApp.Models
 {
-    public partial class WeaponsResult
-
+    public partial class Parent
     {
         [JsonProperty("id")]
         public long Id { get; set; }
 
         [JsonProperty("parent")]
-        public WeaponsResult Parent { get; set; }
+        public WeaponsResult PurpleParent { get; set; }
 
         [JsonProperty("hasChild")]
         public bool HasChild { get; set; }
@@ -51,6 +50,63 @@ namespace MonsterWebApp.Models
 
         [JsonProperty("defense")]
         public long Defense { get; set; }
+
+        [JsonProperty("imgUrl")]
+        public object ImgUrl { get; set; }
+
+        [JsonProperty("materials")]
+        public object Materials { get; set; }
+    }
+
+    public partial class WeaponsResult
+    {
+        [JsonProperty("id")]
+        public long Id { get; set; }
+
+        [JsonProperty("parent")]
+        public Parent Parent { get; set; }
+
+        [JsonProperty("hasChild")]
+        public bool HasChild { get; set; }
+
+        [JsonProperty("weaponClass")]
+        public string WeaponClass { get; set; }
+
+        [JsonProperty("name")]
+        public string Name { get; set; }
+
+        [JsonProperty("description")]
+        public string Description { get; set; }
+
+        [JsonProperty("rawDamage")]
+        public long RawDamage { get; set; }
+
+        [JsonProperty("elementType")]
+        public object ElementType { get; set; }
+
+        [JsonProperty("elementDamage")]
+        public long ElementDamage { get; set; }
+
+        [JsonProperty("sharpness")]
+        public string Sharpness { get; set; }
+
+        [JsonProperty("rarity")]
+        public long Rarity { get; set; }
+
+        [JsonProperty("affinity")]
+        public long Affinity { get; set; }
+
+        [JsonProperty("slots")]
+        public long Slots { get; set; }
+
+        [JsonProperty("defense")]
+        public long Defense { get; set; }
+
+        [JsonProperty("imgUrl")]
+        public object ImgUrl { get; set; }
+
+        [JsonProperty("materials")]
+        public object Materials { get; set; }
     }
 
     public partial class WeaponsResult

@@ -21,10 +21,6 @@ namespace MonsterWebApp.Controllers
             _context = context;
         }
 
-        public HomeController()
-        {
-        }
-
         // GET: /<controller>/
         public IActionResult Index()
         {
@@ -35,7 +31,7 @@ namespace MonsterWebApp.Controllers
         {
             using (var client = new HttpClient())
             {
-                // Update port # in the following line.
+                // Update url in the following line.
                 client.BaseAddress = new Uri("http://monsterhunterapi.azurewebsites.net");
                 var response = await client.GetAsync($"/api/blade");
                 response.EnsureSuccessStatusCode();
@@ -47,15 +43,36 @@ namespace MonsterWebApp.Controllers
             }
         }
 
-        //[HttpPost]
-        //static async Task<Uri> CreateProductAsync(WeaponsResult weaponresult)
-        //{
-        //    HttpResponseMessage response = await client.PostAsJsonAsync(
-        //        "api/blades", product);
-        //    response.EnsureSuccessStatusCode();
+        public async Task<IActionResult> GetBladeByID(int id)
+        {
+            using (var client = new HttpClient())
+            {
+                // Update url in the following line.
+                client.BaseAddress = new Uri("http://monsterhunterapi.azurewebsites.net");
+                var response = await client.GetAsync($"/api/blade/{id}");
+                response.EnsureSuccessStatusCode();
+                var stringResult = await response.Content.ReadAsStringAsync();
+                //deserialized.
+                var deserialized = WeaponsResult.FromJson(stringResult);
 
-        //    // return URI of the created resource.
-        //    return response.Headers.Location;
+                return View(deserialized);
+            }
+        }
+
+        //[HttpPost]
+        //public  async Task<Uri> CreateWeaponAsync(WeaponsResult weaponresult)
+        //{
+        //    using (var client = new HttpClient())
+        //    {
+        //        HttpResponseMessage response = await client.PostAsJsonAsync(
+        //      "api/blades", Weapons);
+        //        response.EnsureSuccessStatusCode();
+
+        //        // return URI of the created resource.
+        //        return response.Headers.Location;
+
+        //    }
+
         //}
 
 
