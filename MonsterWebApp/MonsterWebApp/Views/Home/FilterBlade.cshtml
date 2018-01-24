@@ -1,0 +1,17 @@
+﻿@model IEnumerable<MonsterWebApp.Models.WeaponsResult>
+
+
+@foreach (var i in Model)
+{
+    <tr>
+        <td> <img src="@i.WeaponClass" /></td>
+        <td>Rarity: @i.Rarity</td>
+        <br />
+        <td>Element Type: @i.ElementType</td>
+        <br />
+
+        <td><a asp-action="GetBladeByID" asp-controller="Home" asp-route-id="@i.Id">View</a></td>
+        <hr />
+    </tr>
+
+}
