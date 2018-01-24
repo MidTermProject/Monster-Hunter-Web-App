@@ -4,6 +4,7 @@
 
 <form method="post">
 
+    @*This will be based off of our Weapons Result Model. When we pass it back to the API, it should translate into their Blade Model.*@
     <label for="Name">Name</label>
     <input maxlength="2" name="Points" />
     <br />
@@ -40,11 +41,16 @@
     <label for="ParentBlade">ParentBlade</label>
     <input maxlength="7" name=" Price" />
     <br />
+    
+    @*We need to link the materials to a quantity, need 2 fields for each material?*@
     <label for="material1">Required Materials</label>
     <input maxlength="2" name="Points" />
     <br />
+
     <label for="material2">Required Materials</label>
     <input maxlength="2" name="Points" />
     <br />
+
+    @*We also need to add a "add material button, for swords that require more than 2 materials.*@
     <button type="submit">Submit</button>
 </form>
