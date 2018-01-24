@@ -21,13 +21,15 @@ namespace MonsterWebApp.Controllers
             _context = context;
         }
 
+        public HomeController()
+        {
+        }
+
         // GET: /<controller>/
         public IActionResult Index()
         {
             return View();
         }
-
-
 
         public async Task<IActionResult> GetBlade()
         {
