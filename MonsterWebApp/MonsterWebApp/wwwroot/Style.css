@@ -1,31 +1,17 @@
 ﻿@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,800);
 
-* {
-    box-sizing: border-box;
+.container {
+    display: grid;
+    grid-gap: 3px;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    grid-template-rows: dense;
+}
 }
 
-body {
-    background: #99e699;
+.header {
+    grid-column: 1, -1;
 }
 
-ul{
-    width: 100%;
-    height: 50%;
-    
-}
-
-li{
-    background: green;
-    justify-content: center;
-    display: flex;
-    float: left;
-    width: 30%;
-    height: 30%;
-    margin: auto;
-    padding: 3%;
-}
-
-h1 {
-    justify-content: center;
-    display: flex;
+.weapons li {
+    justify-content:center;
 }
