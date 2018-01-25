@@ -17,34 +17,36 @@ namespace XUnitMidTermProject1
     public class ModelTests
     {
         // Testing Parent
-        /*[Fact]
+        [Fact]
         public void Parent_TestingGetter_ReturnObject()
         {
             // Arrange
-            WeaponsResult n = new WeaponsResult();
+            Parent parentblade = new Parent();
 
             // Act
-            n.Parent = ;
+            WeaponsResult testblade = new WeaponsResult();
+            testblade.Parent = parentblade;
 
             // Assert
-            Assert.Equal("Hunter", n.Parent);
+            Assert.IsType<Parent>(testblade.Parent);
         }
-        
+
 
         [Fact]
         public void Parent_TestingSetter_ReturnObject()
         {
             // Arrange
-            WeaponsResult n = new WeaponsResult() { Parent =  };
+            Parent p = new Parent() { Name = "value" };
 
             // Act
-            n.Parent = "Hunter";
+
+            p.Name = "notValue";
 
             // Assert
-            Assert.Equal("Hunter", n.Parent);
+            Assert.Equal("notValue", p.Name);
         }
-        */
         
+
 
         // Testing HasChild
         [Fact]
@@ -184,12 +186,12 @@ namespace XUnitMidTermProject1
             Assert.Equal(10, n.RawDamage);
         }
 
-        /*
+        
         // Testing ElementType
         [Fact]
-        public void ElementType_TestingGetter_ReturnObject()
+        public void ElementType_TestingGetter_ReturnString()
         {
-            // Arrange
+           // Arrange
             WeaponsResult n = new WeaponsResult();
 
             // Act
@@ -198,12 +200,13 @@ namespace XUnitMidTermProject1
             // Assert
             Assert.Equal("Hunter", n.ElementType);
         }
-
+        
+        
         [Fact]
-        public void ElementType_TestingSetter_ReturnObject()
+        public void ElementType_TestingSetter_ReturnString()
         {
             // Arrange
-            WeaponsResult n = new WeaponsResult() { ElementType = "Monster" };
+            WeaponsResult n = new WeaponsResult() { Description = "Monster" };
 
             // Act
             n.ElementType = "Hunter";
@@ -211,7 +214,8 @@ namespace XUnitMidTermProject1
             // Assert
             Assert.Equal("Hunter", n.ElementType);
         }
-        */
+        
+
 
         // Testing ElementDamage
         [Fact]
