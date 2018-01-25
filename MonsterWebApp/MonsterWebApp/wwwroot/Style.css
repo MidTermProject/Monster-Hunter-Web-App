@@ -5,17 +5,27 @@
     grid-gap: 3px;
     grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
     grid-auto-rows: 100px;
+    grid-template-areas: "h h h h h h h h h h h h"
+                         "c c c c c c c c c c c c"
+                         "c c c c c c c c c c c c"
+                         "f f f f f f f f f f f f"
 }
 }
 
 header {
-    grid-column: 1, -1;
+    grid-area: h;
 }
 
 li {
-    list-style: none;
-    list-style-image: none;
-}
-.weapons li {
     justify-content:center;
+    list-style: none;
+}
+
+.main {
+    grid-area: c;
+}
+
+
+footer {
+    grid-area: f;
 }
