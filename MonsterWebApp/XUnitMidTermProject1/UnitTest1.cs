@@ -23,7 +23,7 @@ namespace XUnitMidTermProject1
             .Options;
 
 
-        // Testing Get for view controller
+        // Testing Get
         [Fact]
         public void ReturnsView()
         {
@@ -37,7 +37,7 @@ namespace XUnitMidTermProject1
             Assert.NotNull(result);
         }
 
-        // testing Result/connection to API side
+        // Testing Result/connection to API side
         [Fact]
         public void GetBlade_ReturnAny()
         {
@@ -54,59 +54,49 @@ namespace XUnitMidTermProject1
             }
         }
 
+        /*
+        [Fact]
+        public void GetBlade_CheckReturnType_ReturnString()
+        {
+            // Arrange
+            using (var client = new HttpClient())
+            {
+                var controller = new HomeController(_context);
+
+                //Act
+                var result = controller.GetBlade();
+
+                //Assert
+                Assert.IsType<object>(result);
+            }
+        }
+        */
+
+        /*
         [Fact]
         public async Task GetBlade_ReturnsObject()
         {
             using (var client = new HttpClient())
             {
                 // Arrange
-                var mockRepo = new Mock<WeaponsDbContext>();
-                mockRepo.Setup(repo => repo.Weapons)
-                    .Returns(Task.FromResult(HomeController()));
-                var controller = new HomeController(mockRepo.Object);
+                var mock = new Mock<WeaponsDbContext>();
+                var controller = new HomeController(mock.Object);
+
+                mock.Setup(x => x.Weapons).Returns(controller);
 
                 // Act
                 var result = await controller.GetBlade();
 
                 // Assert
                 var viewResult = Assert.IsType<ViewResult>(result);
-                var model = Assert.IsAssignableFrom<IEnumerable<StormSessionViewModel>>(
+                var model = Assert.IsAssignableFrom<IEnumerable<>>(
                     viewResult.ViewData.Model);
                 Assert.Equal(2, model.Count());
             }
         }
-
-        // Testing Models
-        [Fact]
-        public void TestName()
-        {
-            WeaponsResult n = new WeaponsResult();
-            n.Name = "Monster";
-            n.Name = "Hunter";
-
-            Assert.Equal("Hunter", n.Name);
-        }
-
-      
-
-        /*
-        [Fact]
-        public void PostWeaponTest()
-        {
-
-
-        }
-
-        // Testing Models
-        [Fact]
-        public void WeaponID()
-        {
-            string testPoints = "90";
-            test.Points = testPoints; // testing set
-
-            Assert.Equal(testPoints, test.Points); // testing get
-        }
         */
+
+
 
 
     }

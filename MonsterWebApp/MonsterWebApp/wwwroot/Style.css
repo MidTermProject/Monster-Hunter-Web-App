@@ -1,12 +1,13 @@
 ﻿@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,800);
 
-* {
-    box-sizing: border-box;
+.container {
+    display: grid;
+    grid-gap: 3px;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    grid-auto-rows: 100px;
+}
 }
 
-body {
-    background: #99e699;
-}
 
 ul {
     width: 100%;
@@ -22,11 +23,10 @@ li {
     height: 30%;
     margin: auto;
     padding: 3%;
-}
 
-h1 {
-    justify-content: center;
-    display: flex;
+}
+.weapons li {
+    justify-content:center;
 }
 
 
