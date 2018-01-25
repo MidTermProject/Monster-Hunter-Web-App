@@ -4,14 +4,18 @@
     display: grid;
     grid-gap: 3px;
     grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-    grid-template-rows: dense;
+    grid-auto-rows: 100px;
 }
 }
 
-.header {
+header {
     grid-column: 1, -1;
 }
 
+li {
+    list-style: none;
+    list-style-image: none;
+}
 .weapons li {
     justify-content:center;
 }
