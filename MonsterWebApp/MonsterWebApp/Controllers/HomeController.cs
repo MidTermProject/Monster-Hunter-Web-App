@@ -36,7 +36,7 @@ namespace MonsterWebApp.Controllers
             {
                 // Update url in the following line.
                 client.BaseAddress = new Uri("http://monsterhunterapi.azurewebsites.net");
-                var response = await client.GetAsync($"/api/blade/getblades");
+                var response = await client.GetAsync($"/api/blade");
                 response.EnsureSuccessStatusCode();
                 var stringResult = await response.Content.ReadAsStringAsync();
                 //deserialized.
