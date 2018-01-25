@@ -4,6 +4,7 @@ using System.Linq;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Threading.Tasks;
+using System.Web.Http;
 using Microsoft.AspNetCore.Mvc;
 using MonsterWebApp.Data;
 using MonsterWebApp.Models;
@@ -15,6 +16,8 @@ namespace MonsterWebApp.Controllers
     public class HomeController : Controller
     {
         private WeaponsDbContext _context;
+
+        public HttpConfiguration Configuration { get; set; }
 
         public HomeController(WeaponsDbContext context)
         {
@@ -33,7 +36,7 @@ namespace MonsterWebApp.Controllers
             {
                 // Update url in the following line.
                 client.BaseAddress = new Uri("http://monsterhunterapi.azurewebsites.net");
-                var response = await client.GetAsync($"/api/blade/getblades");
+                var response = await client.GetAsync($"/api/blade");
                 response.EnsureSuccessStatusCode();
                 var stringResult = await response.Content.ReadAsStringAsync();
                 //deserialized.
@@ -59,21 +62,43 @@ namespace MonsterWebApp.Controllers
             }
         }
 
-        public async Task<IActionResult> GetBladeByID(string weaponclass)
+        public async Task<IActionResult> FilterBlade(string weaponClass, string element, int rarity)
         {
             using (var client = new HttpClient())
             {
                 // Update url in the following line.
                 client.BaseAddress = new Uri("http://monsterhunterapi.azurewebsites.net");
-                var response = await client.GetAsync($"/api/blade/{weaponclass}");
+                var response = await client.GetAsync($"/api/blade/{weaponClass}?{element}?{rarity}");
                 response.EnsureSuccessStatusCode();
                 var stringResult = await response.Content.ReadAsStringAsync();
                 //deserialized.
                 var deserialized = WeaponsResult.FromJson(stringResult);
 
-                return View(deserialized);
+                return View(deserialized);            
+                
             }
         }
+
+        //public async Task<IActionResult> FilterElement(string weaponClass, string element)
+        //{
+        //    using (var client = new HttpClient())
+        //    {
+        //        // Update url in the following line.
+        //        client.BaseAddress = new Uri("http://monsterhunterapi.azurewebsites.net");
+        //        var response = await client.GetAsync($"/api/blade/{weaponClass}?{element}");
+        //        response.EnsureSuccessStatusCode();
+        //        var stringResult = await response.Content.ReadAsStringAsync();
+        //        //deserialized.
+        //        var deserialized = WeaponsResult.FromJson(stringResult);
+
+        //        return View(deserialized);
+
+        //    }
+        //}
+
+
+
+
         //[HttpPost]
         //public  async Task<Uri> CreateWeaponAsync(WeaponsResult weaponresult)
         //{
@@ -87,6 +112,7 @@ namespace MonsterWebApp.Controllers
         //        return response.Headers.Location;
 
         //    }
+
         //}
 
 

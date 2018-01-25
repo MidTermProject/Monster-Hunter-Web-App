@@ -1,0 +1,31 @@
+﻿@model IEnumerable<MonsterWebApp.Models.WeaponsResult>
+
+<link href="style.css" rel="stylesheet">
+
+
+@*<div class="dropdown">
+    <button class="dropbtn">Sort by element</button>
+    <div class="dropdown-content">
+        <a asp-action="FilterBlade" asp-controller="Home" asp-route-element="Fire">Fire</a>
+        <a asp-action="FilterBlade" asp-controller="Home" asp-route-rarity="2">Rarity2</a>
+    </div>
+</div>*@
+
+
+@foreach (var i in Model)
+{
+    <tr>
+        <td> <img src="@i.ImgUrl" height="8%" width="5%" /></td>
+        <br />
+        <td>Weapon Class: @i.WeaponClass</td>
+        <br />
+        <td>Rarity: @i.Rarity</td>
+        <br />
+        <td>Element Type: @i.ElementType</td>
+        <br />
+
+        <td><a asp-action="GetBladeByID" asp-controller="Home" asp-route-id="@i.Id">View</a></td>
+        <br />
+    </tr>
+
+}

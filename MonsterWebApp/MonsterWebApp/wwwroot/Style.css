@@ -5,27 +5,112 @@
     grid-gap: 3px;
     grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
     grid-auto-rows: 100px;
-    grid-template-areas: "h h h h h h h h h h h h"
-                         "c c c c c c c c c c c c"
-                         "c c c c c c c c c c c c"
-                         "f f f f f f f f f f f f"
-}
 }
 
-header {
-    grid-area: h;
+}
+
+
+ul {
+    width: 100%;
+    height: 50%;
 }
 
 li {
-    justify-content:center;
-    list-style: none;
+    background: green;
+    justify-content: center;
+    display: flex;
+    float: left;
+    width: 30%;
+    height: 30%;
+    margin: auto;
+    padding: 3%;
 }
 
-.main {
-    grid-area: c;
+.weapons li {
+    justify-content: center;
 }
 
 
-footer {
-    grid-area: f;
+.topnav {
+    background-color: white;
+    overflow: hidden;
 }
+
+    .topnav a {
+        float: right;
+        color: black;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+    }
+
+
+        .topnav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+
+        .topnav a.active {
+            background-color: #b3ffb3;
+            color: black;
+        }
+
+/* Place the navbar at the bottom of the page, and make it stick */
+.footer {
+    background-color: white;
+    overflow: hidden;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+    /* Style the links inside the navigation bar */
+    .footer a {
+        float: right;
+        display: inline-block;
+        color: black;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+    }
+
+        /* Change the color of links on hover */
+        .footer a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        /* Add a color to the active/current link */
+        .footer a.active {
+            background-color: #b3ffb3;
+            color: Black;
+        }
+
+/* Facebook */
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+}
+
+/* Twitter */
+.fa-twitter {
+    background: #55ACEE;
+    color: white;
+}
+
+/* Style all font awesome icons */
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+}
+
+    /* Add a hover effect if you want */
+    .fa:hover {
+        opacity: 0.7;
+    }

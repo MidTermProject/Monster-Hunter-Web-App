@@ -11,6 +11,7 @@ using System.Web.Http.Results;
 using Microsoft.AspNetCore.Mvc;
 using System.Linq;
 using System.Net.Http;
+using System.Web.Http;
 
 namespace XUnitMidTermProject1
 {
@@ -54,23 +55,25 @@ namespace XUnitMidTermProject1
             }
         }
 
-        /*
+        
         [Fact]
-        public void GetBlade_CheckReturnType_ReturnString()
+        public void GetBlade_CheckID_ReturnID()
         {
-            // Arrange
             using (var client = new HttpClient())
             {
-                var controller = new HomeController(_context);
+                // Arrange
+                HomeController controller = new HomeController(_context);
 
-                //Act
-                var result = controller.GetBlade();
+                // Act
+                var result = controller.GetBladeByID(2);
 
-                //Assert
-                Assert.IsType<object>(result);
+                // Assert
+                Assert.IsType<string>(result);
             }
         }
-        */
+
+
+        
 
         /*
         [Fact]

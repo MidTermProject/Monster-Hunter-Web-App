@@ -1,23 +1,50 @@
-﻿@model MonsterWebApp.Models.UserWeapons
+﻿@model IEnumerable<MonsterWebApp.Models.WeaponsResult>
 
-    @{
-        Layout = "_LayoutTwo";
-     }
-
-
+@{
+    Layout = "_LayoutTwo";
+}
 <link href="style.css" rel="stylesheet">
 
-    <ul class="weapons">
-        <li id="dre">Great Sword</li>
-        <li id="jeff">Long Swords</li>
-        <li id="3">Sword & Shield</li>
-        <li id="4">Dual Blades</li>
-        <li id="5">Hammer</li>
-        <li id="5">Hunting Horn</li>
-        <li id="5">Lance</li>
-        <li id="5">Gunlance</li>
-        <li id="5">Switch Area</li>
-    </ul>
+<div class="container">
+    <h1 class="header">Weapons Selection</h1>
+
+
+
+    <html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>MonsterApp</title>
+    </head>
+
+    <body>
+
+        <ul>
+            <li id="greatSword"><a asp-action="FilterBlade" asp-controller="Home" asp-route-weaponClass="Great Sword">Great Sword</a> Select</li>
+
+            <li id="longSword"><a asp-action="FilterBlade" asp-controller="Home" asp-route-weaponClass="Long Sword">Long Sword</a> Select</li>
+
+            <li id="swordAndShield"><a asp-action="FilterBlade" asp-controller="Home" asp-route-id="">Sword & Shield</a> Select</li>
+
+            <li id="dualBlades"><a asp-action="FilterBlade" asp-controller="Home" asp-route-id="">Dual Blades</a> Select</li>
+
+            <li id="hammer"><a asp-action="FilterBlade" asp-controller="Home" asp-route-id="">Hammer</a> Select</li>
+
+            <li id="huntingHorn"><a asp-action="FilterBlade" asp-controller="Home" asp-route-id="">Hunting Horn</a> Select</li>
+
+            <li id="lance"><a asp-action="FilterBlade" asp-controller="Home" asp-route-id="">Lance</a> Select</li>
+
+            <li id="gunLance"><a asp-action="FilterBlade" asp-controller="Home" asp-route-id="">Great Gunlance</a> Select</li>
+
+            <li id="switchArea"><a asp-action="FilterBlade" asp-controller="Home" asp-route-id="">Switch Area</a> Select</li>
+
+
+
+
+        </ul>
+
+        <td><a asp-action="GetBlade" asp-controller="Home" asp-route-id="">View All Weapons</a></td>
+
+    </body>
+
 
 
 
