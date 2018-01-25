@@ -5,45 +5,43 @@
 }
 <link href="style.css" rel="stylesheet">
 
-<div class="container">
-    <h1 class="header">Weapons Selection</h1>
+<head>
+    <title>MonsterApp</title>
+</head>
 
 
 
-    <html xmlns="http://www.w3.org/1999/xhtml">
-    <head>
-        <title>MonsterApp</title>
-    </head>
+<body>
+    <div class="weaponContainer">
+        <h1>Weapons Selection</h1>
+    </div>
 
-    <body>
+    <ul class="selectors">
+        <li id="greatSword"><a asp-action="FilterBlade" asp-controller="Home" asp-route-weaponClass="Great Sword">Great Sword</a></li>
 
-        <ul>
-            <li id="greatSword"><a asp-action="FilterBlade" asp-controller="Home" asp-route-weaponClass="Great Sword">Great Sword</a> Select</li>
+        <li id="longSword"><a asp-action="FilterBlade" asp-controller="Home" asp-route-weaponClass="Long Sword">Long Sword</a></li>
 
-            <li id="longSword"><a asp-action="FilterBlade" asp-controller="Home" asp-route-weaponClass="Long Sword">Long Sword</a> Select</li>
+        <li id="swordAndShield"><a asp-action="FilterBlade" asp-controller="Home" asp-route-id="">Sword & Shield</a></li>
 
-            <li id="swordAndShield"><a asp-action="FilterBlade" asp-controller="Home" asp-route-id="">Sword & Shield</a> Select</li>
+        <li id="dualBlades"><a asp-action="FilterBlade" asp-controller="Home" asp-route-id="">Dual Blades</a></li>
 
-            <li id="dualBlades"><a asp-action="FilterBlade" asp-controller="Home" asp-route-id="">Dual Blades</a> Select</li>
+        <li id="hammer"><a asp-action="FilterBlade" asp-controller="Home" asp-route-id="">Hammer</a></li>
 
-            <li id="hammer"><a asp-action="FilterBlade" asp-controller="Home" asp-route-id="">Hammer</a> Select</li>
+        <li id="huntingHorn"><a asp-action="FilterBlade" asp-controller="Home" asp-route-id="">Hunting Horn</a></li>
 
-            <li id="huntingHorn"><a asp-action="FilterBlade" asp-controller="Home" asp-route-id="">Hunting Horn</a> Select</li>
+        <li id="lance"><a asp-action="FilterBlade" asp-controller="Home" asp-route-id="">Lance</a></li>
 
-            <li id="lance"><a asp-action="FilterBlade" asp-controller="Home" asp-route-id="">Lance</a> Select</li>
+        <li id="gunLance"><a asp-action="FilterBlade" asp-controller="Home" asp-route-id="">Great Gunlance</a></li>
 
-            <li id="gunLance"><a asp-action="FilterBlade" asp-controller="Home" asp-route-id="">Great Gunlance</a> Select</li>
+        <li id="switchAxe"><a asp-action="FilterBlade" asp-controller="Home" asp-route-id="">Switch Axe</a></li>
 
-            <li id="switchArea"><a asp-action="FilterBlade" asp-controller="Home" asp-route-id="">Switch Area</a> Select</li>
+        <li id="MyWeapons"><a asp-action="FilterBlade" asp-controller="Home" asp-route-id="">My Saved Weapons</a></li>
 
+    </ul>
 
+    <td><a asp-action="GetBlade" asp-controller="Home" asp-route-id="">View All Weapons</a></td>
 
-
-        </ul>
-
-        <td><a asp-action="GetBlade" asp-controller="Home" asp-route-id="">View All Weapons</a></td>
-
-    </body>
+</body>
 
 
 

@@ -1,36 +1,6 @@
 ﻿@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,800);
 
-.container {
-    display: grid;
-    grid-gap: 3px;
-    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-    grid-auto-rows: 100px;
-}
-
-}
-
-
-ul {
-    width: 100%;
-    height: 50%;
-}
-
-li {
-    background: green;
-    justify-content: center;
-    display: flex;
-    float: left;
-    width: 30%;
-    height: 30%;
-    margin: auto;
-    padding: 3%;
-}
-
-.weapons li {
-    justify-content: center;
-}
-
-
+/*header*/
 .topnav {
     background-color: white;
     overflow: hidden;
@@ -57,7 +27,49 @@ li {
             color: black;
         }
 
-/* Place the navbar at the bottom of the page, and make it stick */
+
+.weaponContainer {
+    width: 100%;
+    height: 100px;
+    color: white;
+    position: center;
+    text-align: center;
+    background-image: url("Img/indexPage.jpg");
+    font-family: 'Anton', sans-serif;
+    font-size: 25px;
+}
+
+    .weaponContainer h1 {
+        margin: auto;
+        line-height: 51px;
+        vertical-align: middle;
+        padding-top: 15px;
+    }
+
+
+ul {
+    width: auto;
+    height: 75%;
+}
+
+li {
+    background: #eef3e5;
+    justify-content: center;
+    display: flex;
+    float: left;
+    width: 40%;
+    height: 40%;
+    margin: auto;
+    padding: 3%;
+}
+
+.weapons li {
+    justify-content: center;
+}
+
+
+
+/* footer */
 .footer {
     background-color: white;
     overflow: hidden;
@@ -66,7 +78,6 @@ li {
     width: 100%;
 }
 
-    /* Style the links inside the navigation bar */
     .footer a {
         float: right;
         display: inline-block;
@@ -77,25 +88,25 @@ li {
         font-size: 17px;
     }
 
-        /* Change the color of links on hover */
+        
         .footer a:hover {
             background-color: #ddd;
             color: black;
         }
 
-        /* Add a color to the active/current link */
+       
         .footer a.active {
             background-color: #b3ffb3;
             color: Black;
         }
 
-/* Facebook */
+/* Facebook icon */
 .fa-facebook {
     background: #3B5998;
     color: white;
 }
 
-/* Twitter */
+/* Twitter icon */
 .fa-twitter {
     background: #55ACEE;
     color: white;
