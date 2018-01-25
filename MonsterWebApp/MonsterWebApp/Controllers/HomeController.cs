@@ -4,6 +4,7 @@ using System.Linq;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Threading.Tasks;
+using System.Web.Http;
 using Microsoft.AspNetCore.Mvc;
 using MonsterWebApp.Data;
 using MonsterWebApp.Models;
@@ -15,6 +16,8 @@ namespace MonsterWebApp.Controllers
     public class HomeController : Controller
     {
         private WeaponsDbContext _context;
+
+        public HttpConfiguration Configuration { get; set; }
 
         public HomeController(WeaponsDbContext context)
         {

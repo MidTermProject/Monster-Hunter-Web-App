@@ -374,5 +374,207 @@ namespace XUnitMidTermProject1
             // Assert
             Assert.Equal(5, n.Defense);
         }
+
+        /// <summary>
+        /// User Models
+        /// </summary>
+
+        // Testing UserName
+        [Fact]
+        public void UserName_TestingGetter_ReturnString()
+        {
+            // Arrange
+            UserModel n = new UserModel();
+
+            // Act
+            n.UserName = "name";
+
+            // Assert
+            Assert.Equal("name", n.UserName);
+        }
+
+        [Fact]
+        public void UserName_TestingSetter_ReturnString()
+        {
+            // Arrange
+            UserModel n = new UserModel() { UserName = "name" };
+
+            // Act
+            n.UserName = "diffName";
+
+            // Assert
+            Assert.Equal("diffName", n.UserName);
+        }
+
+
+        /// <summary>
+        /// User Weapons
+        /// </summary>
+
+        // Testing WeaponID
+        [Fact]
+        public void WeaponID_TestingGetter_ReturnInt()
+        {
+            // Arrange
+            UserWeapons n = new UserWeapons();
+
+            // Act
+            n.WeaponID = 4;
+
+            // Assert
+            Assert.Equal(4, n.WeaponID);
+        }
+
+        [Fact]
+        public void WeaponID_TestingSetter_ReturnInt()
+        {
+            // Arrange
+            UserWeapons n = new UserWeapons() { WeaponID = 6 };
+
+            // Act
+            n.WeaponID = 3;
+
+            // Assert
+            Assert.Equal(3, n.WeaponID);
+        }
+
+        // Testing UserID
+        [Fact]
+        public void UserID_TestingGetter_ReturnInt()
+        {
+            // Arrange
+            UserWeapons n = new UserWeapons();
+
+            // Act
+            n.UserID = 4;
+
+            // Assert
+            Assert.Equal(4, n.UserID);
+        }
+
+        [Fact]
+        public void UserID_TestingSetter_ReturnInt()
+        {
+            // Arrange
+            UserWeapons n = new UserWeapons() { UserID = 6 };
+
+            // Act
+            n.UserID = 3;
+
+            // Assert
+            Assert.Equal(3, n.UserID);
+        }
+
+        // Testing WeaponName
+        [Fact]
+        public void WeaponName_TestingGetter_ReturnString()
+        {
+            // Arrange
+            UserWeapons n = new UserWeapons();
+
+            // Act
+            n.WeaponName = "name";
+
+            // Assert
+            Assert.Equal("name", n.WeaponName);
+        }
+
+        [Fact]
+        public void WeaponName_TestingSetter_ReturnString()
+        {
+            // Arrange
+            UserWeapons n = new UserWeapons() { WeaponName = "name" };
+
+            // Act
+            n.WeaponName = "diffName";
+
+            // Assert
+            Assert.Equal("diffName", n.WeaponName);
+        }
+
+        // Testing UserName
+        [Fact]
+        public void UserName2_TestingGetter_ReturnString()
+        {
+            // Arrange
+            UserWeapons n = new UserWeapons();
+
+            // Act
+            n.UserName = "name";
+
+            // Assert
+            Assert.Equal("name", n.UserName);
+        }
+
+        [Fact]
+        public void UserName2_TestingSetter_ReturnString()
+        {
+            // Arrange
+            UserWeapons n = new UserWeapons() { UserName = "name" };
+
+            // Act
+            n.UserName = "diffName";
+
+            // Assert
+            Assert.Equal("diffName", n.UserName);
+        }
+
+        /// <summary>
+        /// Weapons
+        /// </summary>
+
+        // Testing WeaponID
+        [Fact]
+        public void WeaponID2_TestingGetter_ReturnInt()
+        {
+            // Arrange
+            Weapons n = new Weapons();
+
+            // Act
+            n.WeaponID = 4;
+
+            // Assert
+            Assert.Equal(4, n.WeaponID);
+        }
+
+        [Fact]
+        public void WeaponID2_TestingSetter_ReturnInt()
+        {
+            // Arrange
+            Weapons n = new Weapons() { WeaponID = 6 };
+
+            // Act
+            n.WeaponID = 3;
+
+            // Assert
+            Assert.Equal(3, n.WeaponID);
+        }
+
+        // Testing WeaponName
+        [Fact]
+        public void WeaponName2_TestingGetter_ReturnString()
+        {
+            // Arrange
+            Weapons n = new Weapons();
+
+            // Act
+            n.WeaponName = "name";
+
+            // Assert
+            Assert.Equal("name", n.WeaponName);
+        }
+
+        [Fact]
+        public void WeaponName2_TestingSetter_ReturnString()
+        {
+            // Arrange
+            Weapons n = new Weapons() { WeaponName = "name" };
+
+            // Act
+            n.WeaponName = "diffName";
+
+            // Assert
+            Assert.Equal("diffName", n.WeaponName);
+        }
     }
 }
