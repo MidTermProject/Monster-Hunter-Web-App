@@ -1,21 +1,39 @@
 ﻿<!DOCTYPE html>
 
-<html>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+<nav class="topnav">
+    <a class="active" href="#home">Home</a>
+    <a href="#weapons">Sign Up</a>
+    <a href="#filter">Filter</a>
+    <a href="#about">About</a>
+</nav>
+
+<html>
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>@ViewBag.Title</title>
-    <link href="~/style1.css" type="text/css" rel="stylesheet">
+    <link href="~/StyleSignUp.css" type="text/css" rel="stylesheet"/>
 
-    @* reference CSS file *@
+    @* reference css file _Layout*@
 </head>
 
-<body>
 
-    
-    <div>
-        @RenderBody()
+
+<body>
+    <div class="container">
+
+        <div>
+            @RenderBody()
+        </div>
+
+
     </div>
-    
 </body>
+
+
 </html>
+<div class="footer">
+    <a href="#" class="fa fa-facebook"></a>
+    <a href="#" class="fa fa-twitter"></a>
+</div>
