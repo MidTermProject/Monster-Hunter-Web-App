@@ -26,8 +26,13 @@ namespace MonsterWebApp.Controllers
         }
 
         // GET: /<controller>/
-        public IActionResult Index()
+        public IActionResult Index(int? id)
         {
+            if (id != null)
+            {
+                UserModel userModel = _context.Users.FirstOrDefault(u => u.ID == id);
+                if (userModel != null) ViewData["LoggedInUserName"] = userModel.UserName;
+            }
             return View();
         }
 
@@ -37,12 +42,21 @@ namespace MonsterWebApp.Controllers
             {
                 // Update url in the following line.
                 client.BaseAddress = new Uri("http://monsterhunterapi.azurewebsites.net");
-                var response = await client.GetAsync($"/api/blade");
+                var response = await client.GetAsync("/api/blade");
                 response.EnsureSuccessStatusCode();
                 var stringResult = await response.Content.ReadAsStringAsync();
                 //deserialized.
                 var deserialized = WeaponsResult.FromJson(stringResult);
-
+                foreach (var x in deserialized)
+                {
+                    Weapons weapon = new Weapons
+                    {
+                        WeaponName = x.Name,
+                        WeaponID = (int) x.Id
+                    };
+                    _context.Weapons.Add(weapon);
+                }
+                _context.SaveChanges();
                 return View(deserialized);
             }
         }
