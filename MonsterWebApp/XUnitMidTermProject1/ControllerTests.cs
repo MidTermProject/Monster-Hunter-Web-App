@@ -79,13 +79,7 @@ namespace XUnitMidTermProject1
             using (var client = new HttpClient())
             {
                 
-                Parent parent = new Parent { Id = 2 };
-                var mock = new Mock<WeaponsDbContext>();
 
-                mock.Setup(foo => foo.something()).Returns(parent);
-                var sut = new HomeController(mock.Object);
-                var cust2 = sut.GetBladebyID(2);
-                Assert.Equal(cust.Id, cust2.Id);
                 
                
             }
