@@ -34,19 +34,52 @@ namespace MonsterWebApp.Controllers
                 await _context.Users.AddAsync(userModel);
                 await _context.SaveChangesAsync();
             }
-            return RedirectToAction("UserFavoriteWeapons", userModel.UserName);
+            UserModel userId = _context.Users.FirstOrDefault(x => x.UserName == userModel.UserName);
+            return RedirectToAction("Index", "Home", new { id = userId.ID});
         }
 
         [HttpGet]
         public IActionResult UserFavoriteWeapons(string userName)
         {
+            if (String.IsNullOrEmpty(userName)) return RedirectToAction("Index", "Home");
             UserModel requestedUser = _context.Users.SingleOrDefault(u => u.UserName.ToLower() == userName.ToLower());
             if (requestedUser == null) return RedirectToAction("Index", "Home");
 
-            ViewData["LoggedInUserName"] = requestedUser.UserName;
             List<UserWeapon> userWeapons = _context.UserWeapons.Where(u => u.UserID == requestedUser.ID).ToList();
 
             return View(userWeapons);
+        }
+
+        public IActionResult AddWeapoonToUser(string weaponName, string userName)
+        {
+            Weapons uw = _context.Weapons.FirstOrDefault(w => w.WeaponName == weaponName);
+
+            Weapons weapon;
+
+            if (uw == null)
+            {
+                Weapons w = new Weapons {WeaponName = weaponName};
+                _context.Weapons.Add(w);
+                _context.SaveChanges();
+                weapon = _context.Weapons.Last();
+            }
+            else
+                weapon = uw;
+
+            
+            if (_context.UserWeapons.Any(x => x.WeaponName != weaponName))
+            {
+                UserWeapon nuw = new UserWeapon
+                {
+                    WeaponID = weapon.ID,
+                    WeaponName = weaponName,
+                    UserName = "Test"
+                };
+                _context.UserWeapons.Add(nuw);
+                _context.SaveChanges();
+            }
+
+            return RedirectToAction("UserFavoriteWeapons");
         }
     }
 }
