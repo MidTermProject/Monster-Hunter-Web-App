@@ -1,22 +1,7 @@
 ﻿@model IEnumerable<MonsterWebApp.Models.WeaponsResult>
 
-<link href="style.css" rel="stylesheet">
-
-
-@*<div class="dropdown">
-    <button class="dropbtn">Sort by element</button>
-    <div class="dropdown-content">
-        <a asp-action="FilterBlade" asp-controller="Home" asp-route-element="Fire">Fire</a>
-        <a asp-action="FilterBlade" asp-controller="Home" asp-route-rarity="2">Rarity2</a>
-    </div>
-</div>*@
-
-<select name="elementType">
-    <option> Filter By Element</option>
-    <option value="Fire">Fire</option>
-    <option value="Electric">Electri</option>
-    <option value="audi">Audi</option>
-</select>
+<link href="style1.css" rel="stylesheet">
+@{ Layout = "_LayoutTwo";}
 
 @foreach (var i in Model)
 {
