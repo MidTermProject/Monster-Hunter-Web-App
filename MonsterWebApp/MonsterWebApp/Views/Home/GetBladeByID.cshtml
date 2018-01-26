@@ -4,43 +4,29 @@
     Layout = "_Layout";
 }
 
+
+
 @foreach (var i in Model)
 {
-    <tr>
-        <td> <img src="@i.ImgUrl" height="8%" width="5%" /></td>
-        <br />
-        <td>ID: @i.Id</td>
-        <br />
-        <td>Derived From: @i.Parent</td>
-        <br />
-        <td>Child: @i.HasChild</td>
-        <br />
-        <td>Weapon Class: @i.WeaponClass</td>
-        <br />
-        <td>Name: @i.Name</td>
-        <br />
-        <td>Description: @i.Description</td>
-        <br />
-        <td>Raw Damage: @i.RawDamage</td>
-        <br />
-        <td>Element Type: @i.ElementType</td>
-        <br />
-        <td>Element Damage: @i.ElementDamage</td>
-        <br />
-        <td>Sharpness: @i.Sharpness</td>
-        <br />
-        <td>Rarity: @i.Rarity</td>
-        <br />
-        <td>Affinity: @i.Affinity</td>
-        <br />
-        <td>Slot: @i.Slots</td>
-        <br />
-        <td>Defense: @i.Defense</td>
-        <br />
-        <td>Materials: @i.Materials</td>
-        <br />
 
-        @*<td><a asp-action="Update" asp-controller="Home" asp-route-id="@i.ID">Update</a></td>*@
-    </tr>
-
+    <div class="card mb-3">
+        <h3 class="card-header">@i.Name</h3>
+        <div class="card-body">
+            <h5 class="card-title">Weapon Class: @i.WeaponClass</h5>
+        </div>
+        <img display: block;" src="@i.ImgUrl"  alt="Card image">
+        <div class="card-body">
+            <p class="card-text">@i.Description</p>
+        </div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">Element Type: @i.ElementType</li>
+            <li class="list-group-item">Sharpness: @i.Sharpness</li>
+            <li class="list-group-item">Affinity: @i.Affinity</li>
+        </ul>
+        <div class="card-body">
+            <p>Materials</p>
+            <a href="#" class="card-link">@i.Materials</a>
+            @*<a href="#" class="card-link">@i.Materials</a>*@
+        </div>
+    </div>
 }

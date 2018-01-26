@@ -22,14 +22,14 @@
             <td><a asp-action="AddWeapoonToUser" asp-controller="UserModel" asp-route-weaponName="@i.Name"><img src="~/Img/favorite-icon.png" height="15%" width="15%"></a></td>
         </div>
         <div class="card-body text-success">
-            <p class="card-text">@i.WeaponClass</p>
-            <p class="card-text">@i.Rarity</p>
-            <p class="card-text">@i.ElementType</p>
-            <p class="card-text">@i.Description</p>
-            <p class="card-text">@i.ElementType</p>
-            <p class="card-text">@i.ElementDamage</p>
-            <p class="card-text">@i.Sharpness</p>
-            <p class="card-text">@i.Affinity</p>
+            <p class="card-text"><b>Class: </b>@i.WeaponClass</p>
+            <p class="card-text"><b>Description: </b>@i.Description</p>
+            @if (i.ElementType != null)
+            {
+            <p class="card-text"><b>Element Type: </b>@i.ElementType</p>
+            } 
+            <p class="card-text"><b>Element Damage: </b>@i.ElementDamage points</p>
+            <p class="card-text"><b>Sharpness: </b>@i.Sharpness</p>
         </div>
     </div>
 

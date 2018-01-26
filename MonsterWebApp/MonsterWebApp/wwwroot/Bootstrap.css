@@ -94,7 +94,9 @@ h1, h2, h3, h4, h5, h6 {
 
 p {
     margin-top: 0;
-    margin-bottom: 1rem
+    margin-bottom: 1rem;
+    margin-top: 20px;
+    padding: 0 10px 0 10px;
 }
 
 abbr[title], abbr[data-original-title] {
@@ -204,7 +206,8 @@ figure {
 
 img {
     vertical-align: middle;
-    border-style: none
+    border-style: none;
+    margin: 0 3px 0 3px;
 }
 
 svg:not(:root) {
@@ -8987,7 +8990,7 @@ a.text-secondary:hover, a.text-secondary:focus {
 }
 
 .text-success {
-    color: #18BC9C !important
+    color: #333 !important
 }
 
 a.text-success:hover, a.text-success:focus {
