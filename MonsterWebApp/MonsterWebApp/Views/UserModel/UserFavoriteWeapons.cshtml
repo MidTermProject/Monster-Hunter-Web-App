@@ -1,6 +1,10 @@
 ﻿@model List<MonsterWebApp.Models.UserWeapon>
 
-<h1>@ViewData["LoggedInUserName"]</h1>
+@{
+    Layout = "_Layout";
+}
+
+<h1>List of favorite user weapons</h1>
 
 @foreach (var weapon in Model)
 {

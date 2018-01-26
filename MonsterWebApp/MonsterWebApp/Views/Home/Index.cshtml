@@ -1,61 +1,39 @@
 ﻿@model IEnumerable<MonsterWebApp.Models.WeaponsResult>
 
 @{
-    Layout = "_LayoutTwo";
+    Layout = "_Layout";
 }
-<link href="style.css" rel="stylesheet">
-
-<head>
-    <title>MonsterApp</title>
-</head>
 
 
+<div class="jumbotron">
+    <h1 class="display-3">Weapon Selection</h1>
+    <p class="lead">Pick the Weapon you would like to create!</p>
+</div>
+<div class="progress">
+    <div class="progress-bar bg-success" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+</div>
 
-<body>
-    <div class="weaponContainer">
-        <h1>Weapons Selection</h1>
-    </div>
+<div id="firstdiv" class="weapons-names">
+    <ul>
+        <li id="greatSword"><a asp-action="FilterBlade" asp-controller="Home" asp-route-weaponClass="Great Sword"><img src="~/Img/greatsword.png" alt="Great Sword" /></a> Great Sword</li>
+        <li id="longSword"><a asp-action="FilterBlade" asp-controller="Home" asp-route-weaponClass="Long Sword"><img src="~/Img/longsword.png" alt="Alternate Text" /></a> Long Sword</li>
+        <li><a href="link1.html"><img src="~/Img/dualblade.png"></a>Sword & Shield</li>
+    </ul>
+</div>
 
+<div id="seconddiv" class="weapons-names">
+    <ul>
+        <li><a href="link1.html"><img src="~/Img/hammer.png"></a>Hammer</li>
+        <li><a href="link1.html"><img src="~/Img/huntinghorn.png"></a>Hunting Horn</li>
+        <li><a href="link1.html"><img src="~/Img/lance.png"></a>Lance</li>
+    </ul>
+</div>
 
-    <div id="firstdiv">
-        <ul>
-            <li id="greatSword"><a asp-action="FilterBlade" asp-controller="Home" asp-route-weaponClass="Great Sword"><img src="~/Img/greatsword.png" alt="Great Sword" /></a>Great Sword</li>
-
-            <li id="longSword"><a asp-action="FilterBlade" asp-controller="Home" asp-route-weaponClass="Long Sword"><img src="~/Img/longsword.png" alt="Alternate Text" /></a>Long Sword</li>
-
-            <li><a href="link1.html"><img src="~/Img/dualblade.png"></a>Sword & Shield</li>
-        </ul>
-    </div>
-
-    <div id="seconddiv">
-        <ul>
-            <li><a href="link1.html"><img src="~/Img/hammer.png"></a>Hammer</li>
-
-            <li><a href="link1.html"><img src="~/Img/huntinghorn.png"></a>Hunting Horn</li>
-
-            <li><a href="link1.html"><img src="~/Img/lance.png"></a>Lance</li>
-        </ul>
-    </div>
-
-    <div id="thirddiv">
-        <ul>
-            <li><a href="link1.html"><img src="~/Img/gunlance.png"></a>Gunlance</li>
-
-            <li><a href="link1.html"><img src="~/Img/switchaxe.png"></a>Switch Axe</li>
-
-            <li><a href="link1.html"><img src="~/Img/chargeblade.png"></a>Charge Blade</li>
-        </ul>
-    </div>
-
-    <td><a asp-action="GetBlade" asp-controller="Home" asp-route-id="">See All Weapons</a></td>
-
-
-
-
-</body>
-
-
-
-
-
+<div id="thirddiv" class="weapons-names">
+    <ul>
+        <li><a href="link1.html"><img src="~/Img/gunlance.png"></a>Gunlance</li>
+        <li><a href="link1.html"><img src="~/Img/switchaxe.png"></a>Switch Axe</li>
+        <li><a href="link1.html"><img src="~/Img/chargeblade.png"></a>Charge Blade</li>
+    </ul>
+</div>
 

@@ -1,22 +1,36 @@
 ﻿@model IEnumerable<MonsterWebApp.Models.WeaponsResult>
 
-<link href="style1.css" rel="stylesheet">
-@{ Layout = "_LayoutTwo";}
+@{
+    Layout = "_Layout";
+}
+
+@*<div class="dropdown">
+        <button class="dropbtn">Sort by element</button>
+        <div class="dropdown-content">
+            <a asp-action="FilterBlade" asp-controller="Home" asp-route-element="Fire">Fire</a>
+            <a asp-action="FilterBlade" asp-controller="Home" asp-route-rarity="2">Rarity2</a>
+        </div>
+    </div>*@
+
 
 @foreach (var i in Model)
 {
-    <tr>
-        <td> <img src="@i.ImgUrl" height="8%" width="5%" /></td>
-        <br />
-        <td>Weapon Class: @i.WeaponClass</td>
-        <br />
-        <td>Rarity: @i.Rarity</td>
-        <br />
-        <td>Element Type: @i.ElementType</td>
-        <br />
-
-        <td><a asp-action="GetBladeByID" asp-controller="Home" asp-route-id="@i.Id">View</a></td>
-        <br />
-    </tr>
+    <div class="card border-success mb-3" style="max-width: 20rem;">
+        <div class="card-header">
+            <img src="@i.ImgUrl" height="15%" width="15%" />
+            <a asp-action="GetBladeByID" asp-controller="Home" asp-route-id="@i.Id">@i.Name</a>
+            <td><a asp-action="AddWeapoonToUser" asp-controller="UserModel" asp-route-weaponName="@i.Name"><img src="~/Img/favorite-icon.png" height="15%" width="15%"></a></td>
+        </div>
+        <div class="card-body text-success">
+            <p class="card-text">@i.WeaponClass</p>
+            <p class="card-text">@i.Rarity</p>
+            <p class="card-text">@i.ElementType</p>
+            <p class="card-text">@i.Description</p>
+            <p class="card-text">@i.ElementType</p>
+            <p class="card-text">@i.ElementDamage</p>
+            <p class="card-text">@i.Sharpness</p>
+            <p class="card-text">@i.Affinity</p>
+        </div>
+    </div>
 
 }
