@@ -1,17 +1,20 @@
 ﻿@model IEnumerable<MonsterWebApp.Models.WeaponsResult>
 
+@{
+    Layout = "_Layout";
+}
 
 @foreach (var i in Model)
 {
-<tr>
-    <td> <img src="@i.ImgUrl" height="8%" width="5%" /></td>
-    <td>Name: @i.Name</td>
-    <br />
-    <td>Weapon Class: @i.WeaponClass</td>
-    <br />
+    <tr>
+        <td> <img src="@i.ImgUrl" height="8%" width="5%" /></td>
+        <td>Name: @i.Name</td>
+        <br />
+        <td>Weapon Class: @i.WeaponClass</td>
+        <br />
 
-    <td><a asp-action="GetBladeByID" asp-controller="Home" asp-route-id="@i.Id">View</a></td>
-    <hr />
-</tr>
+        <td><a asp-action="GetBladeByID" asp-controller="Home" asp-route-id="@i.Id">View</a></td>
+        <hr />
+    </tr>
 
 }

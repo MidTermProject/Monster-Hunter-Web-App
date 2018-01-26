@@ -1,39 +1,17 @@
 ﻿<!DOCTYPE html>
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-<nav class="topnav">
-    <a class="active" href="#home">Home</a>
-    <a href="#weapons">Sign Up</a>
-    <a href="#filter">Filter</a>
-    <a href="#about">About</a>
-</nav>
-
 <html>
 <head>
-    <meta name="viewport" content="width=device-width" />
-    <title>@ViewBag.Title</title>
-    <link href="~/StyleSignUp.css" type="text/css" rel="stylesheet"/>
-
-    @* reference css file _Layout*@
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monster Hunter</title>
+    <link href="style.css" rel="stylesheet">
+    <link href="~/StyleSignUp.css" type="text/css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    @RenderSection("head", required: false)
 </head>
-
-
-
 <body>
-    <div class="container">
-
-        <div>
-            @RenderBody()
-        </div>
-
-
-    </div>
+@Html.Partial("_NavBar")
+@RenderBody()
+@Html.Partial("_Footer")
 </body>
-
-
 </html>
-<div class="footer">
-    <a href="#" class="fa fa-facebook"></a>
-    <a href="#" class="fa fa-twitter"></a>
-</div>
