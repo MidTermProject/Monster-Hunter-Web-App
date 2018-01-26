@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,15 +24,14 @@ namespace MonsterWebApp.Controllers
         [HttpPost]
         public async Task<IActionResult> Index(WeaponsResult weaponresult)
         {
-            var serializedWeapon = Serialize.ToJson(weaponresult);
+            if (!ModelState.IsValid) return BadRequest();
+            var serializedWeapon = weaponresult.ToJson();
             var httpContent = new StringContent(serializedWeapon, Encoding.UTF8, "application/json");
 
             using (var client = new HttpClient())
-            {
-                var response = await client.PostAsync("http://monsterhunterapi.azurewebsites.net/api/blade", httpContent);
-            }
-
-            return Ok(201);
+                await client.PostAsync("http://monsterhunterapi.azurewebsites.net/api/blade", httpContent);
+            
+            return RedirectToAction("Index");
         }
     }
 }
