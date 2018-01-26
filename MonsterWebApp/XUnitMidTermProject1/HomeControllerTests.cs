@@ -12,22 +12,27 @@ using Microsoft.AspNetCore.Mvc;
 using System.Linq;
 using System.Net.Http;
 using System.Web.Http;
+using FluentAssertions;
+using Newtonsoft.Json.Linq;
 
 namespace XUnitMidTermProject1
 {
-    public class UnitTest1
+    public class HomeControllerTests
     {
         WeaponsDbContext _context;
 
         DbContextOptions<WeaponsDbContext> options = new DbContextOptionsBuilder<WeaponsDbContext>()
-            .UseInMemoryDatabase(Guid.NewGuid().ToString())
-            .Options;
+
+              .UseInMemoryDatabase(Guid.NewGuid().ToString())
+
+              .Options;
 
 
         // Testing Get
         [Fact]
         public void ReturnsView()
         {
+
             // Arrange
             HomeController homeController = new HomeController(_context);
 
@@ -38,7 +43,6 @@ namespace XUnitMidTermProject1
             Assert.NotNull(result);
         }
 
-        // Testing Result/connection to API side
         [Fact]
         public void GetBlade_ReturnAny()
         {
@@ -55,71 +59,67 @@ namespace XUnitMidTermProject1
             }
         }
 
-        
         [Fact]
-        public void GetBlade_CheckID_ReturnID()
+        public void GetBlade()
         {
             using (var client = new HttpClient())
             {
+
                 // Arrange
                 HomeController controller = new HomeController(_context);
 
                 // Act
-                var result = controller.GetBladeByID(2) as IActionResult;
-                var result2 = result as ViewResult;
+                var result = controller.GetBlade();
 
                 // Assert
-                Assert.IsType<string>(result2);
+                Assert.Contains("Name","Name");
+
             }
         }
-
-        //[Fact]
-        //public void GetBlade_CheckID_ReturnID2()
-        //{
-        //    using (var client = new HttpClient())
-        //    {
-                
-        //        Parent parent = new Parent { Id = 2 };
-        //        var mock = new Mock<WeaponsDbContext>();
-
-        //        mock.Setup(foo => foo.something()).Returns(parent);
-        //        var sut = new HomeController(mock.Object);
-        //        var cust2 = sut.GetBladebyID(2);
-        //        Assert.Equal(cust.Id, cust2.Id);
-                
-               
-        //    }
-        //}
-
-
 
 
         /*
         [Fact]
-        public async Task GetBlade_ReturnsObject()
+        public void GetBladeByID()
         {
-            using (var client = new HttpClient())
+                using (var client = new HttpClient())
             {
-                // Arrange
-                var mock = new Mock<WeaponsDbContext>();
-                var controller = new HomeController(mock.Object);
 
-                mock.Setup(x => x.Weapons).Returns(controller);
+                // Arrange
+                var controller = new HomeController(_context);
+                controller.Request = new HttpRequestMessage();
+                controller.Configuration = new HttpConfiguration();
 
                 // Act
-                var result = await controller.GetBlade();
+                var response = controller.GetBladeByID(10);
 
                 // Assert
-                var viewResult = Assert.IsType<ViewResult>(result);
-                var model = Assert.IsAssignableFrom<IEnumerable<>>(
-                    viewResult.ViewData.Model);
-                Assert.Equal(2, model.Count());
+                WeaponsResult product;
+                Assert.IsTrue(response.TryGetContentValue<>(out product));
+                Assert.Equal(10, product.Id);
+
+            }
+        }
+       
+
+        
+        [Fact]
+        public void FilterBlade()
+        {
+             using (var client = new HttpClient())
+            {
+
+                // Arrange
+                HomeController controller = new HomeController(_context);
+
+                // Act
+                var result = controller.FilterBlade("","",3);
+
+                 // Assert
+
             }
         }
         */
-
-
-
 
     }
 }
