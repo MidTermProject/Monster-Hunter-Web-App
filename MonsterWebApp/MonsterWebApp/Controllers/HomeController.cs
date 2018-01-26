@@ -79,9 +79,5 @@ namespace MonsterWebApp.Controllers
 
             }
         }
-
-    
-
-
     }
 }
