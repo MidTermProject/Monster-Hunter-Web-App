@@ -116,7 +116,7 @@ namespace MonsterWebApp.Models
 
     public static class Serialize
     {
-        public static string ToJson(this WeaponsResult[] self) => JsonConvert.SerializeObject(self, Converter.Settings);
+        public static string ToJson(this WeaponsResult self) => JsonConvert.SerializeObject(self, Converter.Settings);
     }
 
     public class Converter

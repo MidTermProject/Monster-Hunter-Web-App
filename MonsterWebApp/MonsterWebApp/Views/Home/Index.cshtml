@@ -16,30 +16,43 @@
         <h1>Weapons Selection</h1>
     </div>
 
-    <ul class="selectors">
-        <li id="greatSword"><a asp-action="FilterBlade" asp-controller="Home" asp-route-weaponClass="Great Sword">Great Sword</a></li>
 
-        <li id="longSword"><a asp-action="FilterBlade" asp-controller="Home" asp-route-weaponClass="Long Sword">Long Sword</a></li>
+    <div id="firstdiv">
+        <ul>
+            <li id="greatSword"><a asp-action="FilterBlade" asp-controller="Home" asp-route-weaponClass="Great Sword"><img src="~/Img/greatsword.png" alt="Great Sword" /></a>Great Sword</li>
 
-        <li id="swordAndShield"><a asp-action="FilterBlade" asp-controller="Home" asp-route-id="">Sword & Shield</a></li>
+            <li id="longSword"><a asp-action="FilterBlade" asp-controller="Home" asp-route-weaponClass="Long Sword"><img src="~/Img/longsword.png" alt="Alternate Text" /></a>Long Sword</li>
 
-        <li id="dualBlades"><a asp-action="FilterBlade" asp-controller="Home" asp-route-id="">Dual Blades</a></li>
+            <li><a href="link1.html"><img src="~/Img/dualblade.png"></a>Sword & Shield</li>
+        </ul>
+    </div>
 
-        <li id="hammer"><a asp-action="FilterBlade" asp-controller="Home" asp-route-id="">Hammer</a></li>
+    <div id="seconddiv">
+        <ul>
+            <li><a href="link1.html"><img src="~/Img/hammer.png"></a>Hammer</li>
 
-        <li id="huntingHorn"><a asp-action="FilterBlade" asp-controller="Home" asp-route-id="">Hunting Horn</a></li>
+            <li><a href="link1.html"><img src="~/Img/huntinghorn.png"></a>Hunting Horn</li>
 
-        <li id="lance"><a asp-action="FilterBlade" asp-controller="Home" asp-route-id="">Lance</a></li>
+            <li><a href="link1.html"><img src="~/Img/lance.png"></a>Lance</li>
+        </ul>
+    </div>
 
-        <li id="gunLance"><a asp-action="FilterBlade" asp-controller="Home" asp-route-id="">Great Gunlance</a></li>
+    <div id="thirddiv">
+        <ul>
+            <li><a href="link1.html"><img src="~/Img/gunlance.png"></a>Gunlance</li>
 
-        <li id="switchAxe"><a asp-action="FilterBlade" asp-controller="Home" asp-route-id="">Switch Axe</a></li>
+            <li><a href="link1.html"><img src="~/Img/switchaxe.png"></a>Switch Axe</li>
 
-        <li id="MyWeapons"><a asp-action="FilterBlade" asp-controller="Home" asp-route-id="">My Saved Weapons</a></li>
+            <li><a href="link1.html"><img src="~/Img/chargeblade.png"></a>Charge Blade</li>
+        </ul>
+    </div>
 
-    </ul>
+    <td id="MyWeapons"><a asp-action="FilterBlade" asp-controller="Home" asp-route-id=""><img src="~/Img/savedweapons.png">My Saved Weapons</a></td>
 
-    <td><a asp-action="GetBlade" asp-controller="Home" asp-route-id="">View All Weapons</a></td>
+    <td><a asp-action="GetBlade" asp-controller="Home" asp-route-id=""></a></td>
+
+
+
 
 </body>
 
