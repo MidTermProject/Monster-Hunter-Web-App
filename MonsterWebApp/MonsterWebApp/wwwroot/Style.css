@@ -162,3 +162,8 @@ html, body {
     position: fixed;
     width: 100% !important;
 }
+
+.adminforms {
+    position: relative;
+    left: 32em;
+}

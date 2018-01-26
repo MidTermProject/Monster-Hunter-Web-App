@@ -1,11 +1,17 @@
 @model MonsterWebApp.Models.WeaponsResult
 @* We need multiple fields in a form to catch input, then send the inputs as a HTTP POST to the API, we also need to serialize the info for the info getting pushed out.*@
 
+@{
+    Layout = "_Layout";
+}
+
 <form method="post">
 
     @*This will be based off of our Weapons Result Model. When we pass it back to the API, it should translate into their Blade Model.*@
+    <div class="adminforms">
     <label for="Name">Name</label>
     <input maxlength="30" name="name" required />
+   
     <br />
     <label for="HasChild">Can be upgraded?</label>
     <select name="HasChild">
@@ -54,12 +60,8 @@
     <input type="number" maxlength="7" minvalue="0" name="defense" required />
     <br />
     @*<label for="imgUrl">imgUrl</label>
-    <input type="image" name="imgUrl" />*@
-    <br />
-
+        <input type="image" name="imgUrl" />*@
     @*We need to link the materials to a quantity, need 2 fields for each material?*@
-
-    <br /><br />
 
     <select id="materials" name="Materials">
         @foreach (var i in ViewBag.Materials)
@@ -69,17 +71,17 @@
     </select>
     <input type="number" maxlength="3" name="Quantity" placeholder="Quantity" />
     <button name="add" type="button" onclick="addToList(@Model);">Add Material</button><br />
-
-    <br /><br />
+    <br />
     <button type="submit">Add Weapon to Database</button><br />
-    <br /><br />
+    <br />
+    </div>
 </form>
 
 <script>
     function addToList() {
         $("button.add").click(function (Model) {
             var from = $("#materials").attr("value");
-            
+
         });
     }
 </script>
