@@ -14,7 +14,7 @@ using System.Net.Http;
 
 namespace XUnitMidTermProject1
 {
-    public class ModelTests
+    public class ParentTests
     {
         // Testing Parent
         [Fact]
@@ -36,7 +36,7 @@ namespace XUnitMidTermProject1
         public void Parent_TestingSetter_ReturnObject()
         {
             // Arrange
-            WeaponsResult p = new WeaponsResult() { Name = "value" };
+            Parent p = new Parent() { Name = "value" };
 
             // Act
             p.Name = "notValue";
@@ -44,7 +44,7 @@ namespace XUnitMidTermProject1
             // Assert
             Assert.Equal("notValue", p.Name);
         }
-        
+
 
 
         // Testing HasChild
@@ -52,9 +52,9 @@ namespace XUnitMidTermProject1
         public void HasChild_TestingGetter_ReturnBool()
         {
             // Arrange
-            WeaponsResult n = new WeaponsResult();
-            WeaponsResult parent = new WeaponsResult();
-            
+            Parent n = new Parent();
+            Parent parent = new Parent();
+
 
             // Act
             n.HasChild = true;
@@ -65,12 +65,12 @@ namespace XUnitMidTermProject1
             Assert.True(parent.HasChild);
         }
 
-        
+
         [Fact]
         public void HasChild_TestingSetter_ReturnBool()
         {
             // Arrange
-            WeaponsResult n = new WeaponsResult() { HasChild = false };
+            Parent n = new Parent() { HasChild = false };
 
             // Act
             n.HasChild = true;
@@ -78,14 +78,14 @@ namespace XUnitMidTermProject1
             // Assert
             Assert.True(n.HasChild);
         }
-        
+
 
         // Testing WeaponClass
         [Fact]
         public void WeaponClass_TestingGetter_ReturnString()
         {
             // Arrange
-            WeaponsResult n = new WeaponsResult();
+            Parent n = new Parent();
 
             // Act
             n.WeaponClass = "Hunter";
@@ -98,7 +98,7 @@ namespace XUnitMidTermProject1
         public void WeaponClass_TestingSetter_ReturnString()
         {
             // Arrange
-            WeaponsResult n = new WeaponsResult() { Name = "Monster" };
+            Parent n = new Parent() { Name = "Monster" };
 
             // Act
             n.WeaponClass = "Hunter";
@@ -113,7 +113,7 @@ namespace XUnitMidTermProject1
         public void Name_TestingGetter_ReturnString()
         {
             // Arrange
-            WeaponsResult n = new WeaponsResult();
+            Parent n = new Parent();
 
             // Act
             n.Name = "Hunter";
@@ -126,7 +126,7 @@ namespace XUnitMidTermProject1
         public void Name_TestingSetter_ReturnString()
         {
             // Arrange
-            WeaponsResult n = new WeaponsResult() { Name = "Monster" };
+            Parent n = new Parent() { Name = "Monster" };
 
             // Act
             n.Name = "Hunter";
@@ -140,7 +140,7 @@ namespace XUnitMidTermProject1
         public void Description_TestingGetter_ReturnString()
         {
             // Arrange
-            WeaponsResult n = new WeaponsResult();
+            Parent n = new Parent();
 
             // Act
             n.Description = "Hunter";
@@ -153,7 +153,7 @@ namespace XUnitMidTermProject1
         public void Descriptioin_TestingSetter_ReturnString()
         {
             // Arrange
-            WeaponsResult n = new WeaponsResult() { Description = "Monster" };
+            Parent n = new Parent() { Description = "Monster" };
 
             // Act
             n.Description = "Hunter";
@@ -167,7 +167,7 @@ namespace XUnitMidTermProject1
         public void RawDamage_TestingGetter_ReturnLong()
         {
             // Arrange
-            WeaponsResult n = new WeaponsResult();
+            Parent n = new Parent();
 
             // Act
             n.RawDamage = 5;
@@ -180,7 +180,7 @@ namespace XUnitMidTermProject1
         public void RawDamage_TestingSetter_ReturnLong()
         {
             // Arrange
-            WeaponsResult n = new WeaponsResult() { RawDamage = 9 };
+            Parent n = new Parent() { RawDamage = 9 };
 
             // Act
             n.RawDamage = 10;
@@ -189,13 +189,13 @@ namespace XUnitMidTermProject1
             Assert.Equal(10, n.RawDamage);
         }
 
-        
+
         // Testing ElementType
         [Fact]
         public void ElementType_TestingGetter_ReturnString()
         {
-           // Arrange
-            WeaponsResult n = new WeaponsResult();
+            // Arrange
+            Parent n = new Parent();
 
             // Act
             n.ElementType = "Hunter";
@@ -203,13 +203,13 @@ namespace XUnitMidTermProject1
             // Assert
             Assert.Equal("Hunter", n.ElementType);
         }
-        
-        
+
+
         [Fact]
         public void ElementType_TestingSetter_ReturnString()
         {
             // Arrange
-            WeaponsResult n = new WeaponsResult() { Description = "Monster" };
+            Parent n = new Parent() { Description = "Monster" };
 
             // Act
             n.ElementType = "Hunter";
@@ -217,7 +217,7 @@ namespace XUnitMidTermProject1
             // Assert
             Assert.Equal("Hunter", n.ElementType);
         }
-        
+
 
 
         // Testing ElementDamage
@@ -225,7 +225,7 @@ namespace XUnitMidTermProject1
         public void ElementDamage_TestingGetter_ReturnLong()
         {
             // Arrange
-            WeaponsResult n = new WeaponsResult();
+            Parent n = new Parent();
 
             // Act
             n.ElementDamage = 3;
@@ -238,7 +238,7 @@ namespace XUnitMidTermProject1
         public void ElementDamage_TestingSetter_ReturnLong()
         {
             // Arrange
-            WeaponsResult n = new WeaponsResult() { ElementDamage = 4 };
+            Parent n = new Parent() { ElementDamage = 4 };
 
             // Act
             n.ElementDamage = 5;
@@ -252,7 +252,7 @@ namespace XUnitMidTermProject1
         public void Sharpness_TestingGetter_ReturnString()
         {
             // Arrange
-            WeaponsResult n = new WeaponsResult();
+            Parent n = new Parent();
 
             // Act
             n.Sharpness = "Hunter";
@@ -265,7 +265,7 @@ namespace XUnitMidTermProject1
         public void Sharpness_TestingSetter_ReturnString()
         {
             // Arrange
-            WeaponsResult n = new WeaponsResult() { Sharpness = "Monster" };
+            Parent n = new Parent() { Sharpness = "Monster" };
 
             // Act
             n.Sharpness = "Hunter";
@@ -279,7 +279,7 @@ namespace XUnitMidTermProject1
         public void Rarity_TestingGetter_ReturnLong()
         {
             // Arrange
-            WeaponsResult n = new WeaponsResult();
+            Parent n = new Parent();
 
             // Act
             n.Rarity = 9;
@@ -292,7 +292,7 @@ namespace XUnitMidTermProject1
         public void Rarity_TestingSetter_ReturnLong()
         {
             // Arrange
-            WeaponsResult n = new WeaponsResult() { Rarity = 9 };
+            Parent n = new Parent() { Rarity = 9 };
 
             // Act
             n.Rarity = 5;
@@ -306,7 +306,7 @@ namespace XUnitMidTermProject1
         public void Affinity_TestingGetter_ReturnLong()
         {
             // Arrange
-            WeaponsResult n = new WeaponsResult();
+            Parent n = new Parent();
 
             // Act
             n.Affinity = 2;
@@ -319,7 +319,7 @@ namespace XUnitMidTermProject1
         public void Affinity_TestingSetter_ReturnLong()
         {
             // Arrange
-            WeaponsResult n = new WeaponsResult() { Affinity = 9 };
+            Parent n = new Parent() { Affinity = 9 };
 
             // Act
             n.Affinity = 4;
@@ -333,7 +333,7 @@ namespace XUnitMidTermProject1
         public void Slots_TestingGetter_ReturnLong()
         {
             // Arrange
-            WeaponsResult n = new WeaponsResult();
+            Parent n = new Parent();
 
             // Act
             n.Slots = 5;
@@ -346,7 +346,7 @@ namespace XUnitMidTermProject1
         public void Slots_TestingSetter_ReturnString()
         {
             // Arrange
-            WeaponsResult n = new WeaponsResult() { Slots = 3 };
+            Parent n = new Parent() { Slots = 3 };
 
             // Act
             n.Slots = 2;
@@ -360,7 +360,7 @@ namespace XUnitMidTermProject1
         public void Defense_TestingGetter_ReturnLong()
         {
             // Arrange
-            WeaponsResult n = new WeaponsResult();
+            Parent n = new Parent();
 
             // Act
             n.Defense = 8;
@@ -373,7 +373,7 @@ namespace XUnitMidTermProject1
         public void Defense_TestingSetter_ReturnLong()
         {
             // Arrange
-            WeaponsResult n = new WeaponsResult() { Defense = 1 };
+            Parent n = new Parent() { Defense = 1 };
 
             // Act
             n.Defense = 5;
@@ -387,7 +387,7 @@ namespace XUnitMidTermProject1
         public void ImgUrl_TestingGetter_ReturnString()
         {
             // Arrange
-            WeaponsResult n = new WeaponsResult();
+            Parent n = new Parent();
 
             // Act
             n.ImgUrl = "url";
@@ -400,7 +400,7 @@ namespace XUnitMidTermProject1
         public void ImgUrl_TestingSetter_ReturnString()
         {
             // Arrange
-            WeaponsResult n = new WeaponsResult() { ImgUrl = "url" };
+            Parent n = new Parent() { ImgUrl = "url" };
 
             // Act
             n.ImgUrl = "notUrl";
@@ -414,7 +414,7 @@ namespace XUnitMidTermProject1
         public void Materials_TestingGetter_ReturnString()
         {
             // Arrange
-            WeaponsResult n = new WeaponsResult();
+            Parent n = new Parent();
 
             // Act
             n.Materials = "url";
@@ -427,7 +427,7 @@ namespace XUnitMidTermProject1
         public void Materials_TestingSetter_ReturnString()
         {
             // Arrange
-            WeaponsResult n = new WeaponsResult() { Materials = "url" };
+            Parent n = new Parent() { Materials = "url" };
 
             // Act
             n.Materials = "notUrl";
@@ -477,7 +477,7 @@ namespace XUnitMidTermProject1
         public void WeaponID_TestingGetter_ReturnInt()
         {
             // Arrange
-            UserWeapon n = new UserWeapon();
+            UserWeapons n = new UserWeapons();
 
             // Act
             n.WeaponID = 4;
@@ -490,7 +490,7 @@ namespace XUnitMidTermProject1
         public void WeaponID_TestingSetter_ReturnInt()
         {
             // Arrange
-            UserWeapon n = new UserWeapon() { WeaponID = 6 };
+            UserWeapons n = new UserWeapons() { WeaponID = 6 };
 
             // Act
             n.WeaponID = 3;
@@ -504,7 +504,7 @@ namespace XUnitMidTermProject1
         public void UserID_TestingGetter_ReturnInt()
         {
             // Arrange
-            UserWeapon n = new UserWeapon();
+            UserWeapons n = new UserWeapons();
 
             // Act
             n.UserID = 4;
@@ -517,7 +517,7 @@ namespace XUnitMidTermProject1
         public void UserID_TestingSetter_ReturnInt()
         {
             // Arrange
-            UserWeapon n = new UserWeapon() { UserID = 6 };
+            UserWeapons n = new UserWeapons() { UserID = 6 };
 
             // Act
             n.UserID = 3;
@@ -531,7 +531,7 @@ namespace XUnitMidTermProject1
         public void WeaponName_TestingGetter_ReturnString()
         {
             // Arrange
-            UserWeapon n = new UserWeapon();
+            UserWeapons n = new UserWeapons();
 
             // Act
             n.WeaponName = "name";
@@ -544,7 +544,7 @@ namespace XUnitMidTermProject1
         public void WeaponName_TestingSetter_ReturnString()
         {
             // Arrange
-            UserWeapon n = new UserWeapon() { WeaponName = "name" };
+            UserWeapons n = new UserWeapons() { WeaponName = "name" };
 
             // Act
             n.WeaponName = "diffName";
@@ -558,7 +558,7 @@ namespace XUnitMidTermProject1
         public void UserName2_TestingGetter_ReturnString()
         {
             // Arrange
-            UserWeapon n = new UserWeapon();
+            UserWeapons n = new UserWeapons();
 
             // Act
             n.UserName = "name";
@@ -571,7 +571,7 @@ namespace XUnitMidTermProject1
         public void UserName2_TestingSetter_ReturnString()
         {
             // Arrange
-            UserWeapon n = new UserWeapon() { UserName = "name" };
+            UserWeapons n = new UserWeapons() { UserName = "name" };
 
             // Act
             n.UserName = "diffName";
