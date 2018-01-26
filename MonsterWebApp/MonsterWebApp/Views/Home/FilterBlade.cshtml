@@ -1,4 +1,4 @@
-﻿@model IEnumerable<MonsterWebApp.Models.WeaponsResult>
+@model IEnumerable<MonsterWebApp.Models.WeaponsResult>
 
 @{
     Layout = "_Layout";
@@ -22,6 +22,7 @@
             <td><a asp-action="AddWeapoonToUser" asp-controller="UserModel" asp-route-weaponName="@i.Name"><img src="~/Img/favorite-icon.png" height="15%" width="15%"></a></td>
         </div>
         <div class="card-body text-success">
+
             <p class="card-text"><b>Class: </b>@i.WeaponClass</p>
             <p class="card-text"><b>Description: </b>@i.Description</p>
             @if (i.ElementType != null)

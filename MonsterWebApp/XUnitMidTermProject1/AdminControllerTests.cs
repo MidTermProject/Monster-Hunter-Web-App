@@ -9,54 +9,54 @@ using MonsterWebApp.Controllers;
 using Microsoft.AspNetCore.Mvc;
 using MonsterWebApp.Data;
 
-namespace XUnitMidTermProject1
-{
-    public class AdminControllerTests
-    {
-        DbContextOptions<WeaponsDbContext> options = new DbContextOptionsBuilder<WeaponsDbContext>()
+//namespace XUnitMidTermProject1
+//{
+//    public class AdminControllerTests
+//    {
+//        DbContextOptions<WeaponsDbContext> options = new DbContextOptionsBuilder<WeaponsDbContext>()
 
-              .UseInMemoryDatabase(Guid.NewGuid().ToString())
+//              .UseInMemoryDatabase(Guid.NewGuid().ToString())
 
-              .Options;
+//              .Options;
 
-        [Fact]
-        public void ReturnAdminView()
-        {
-            // Arrange
-            AdminController controller = new AdminController();
+        //[Fact]
+        //public void ReturnAdminView()
+        //{
+        //    // Arrange
+        //    AdminController controller = new AdminController();
 
-            // Act
-            var result = controller.Index() as IActionResult;
+        //    // Act
+        //    var result = controller.Index() as IActionResult;
 
-            // Assert
-            Assert.NotNull(result);
+        //    // Assert
+        //    Assert.NotNull(result);
 
-        }
+        //}
 
-        [Fact]
-        public async void ReturnAdminViewPost()
-        {
-            using (WeaponsDbContext _context = new WeaponsDbContext(options))
-            {
-                // Arrange
-                AdminController controller = new AdminController();
-                WeaponsResult weapons = new WeaponsResult()
+//        [Fact]
+//        public async void ReturnAdminViewPost()
+//        {
+//            using (WeaponsDbContext _context = new WeaponsDbContext(options))
+//            {
+//                // Arrange
+//                AdminController controller = new AdminController();
+//                WeaponsResult weapons = new WeaponsResult()
 
-                {
-                    Name = "Jeffs Weapon",
-                    Description = "It's pretty cool",
-                    RawDamage = 10,
-                    ElementDamage = 10,
-                    ElementType = "Fire"
-                };
+//                {
+//                    Name = "Jeffs Weapon",
+//                    Description = "It's pretty cool",
+//                    RawDamage = 10,
+//                    ElementDamage = 10,
+//                    ElementType = "Fire"
+//                };
 
-                // Act
-               var result = await controller.Index(weapons);
-               OkObjectResult myResult = (OkObjectResult)result;
+//                // Act
+//               var result = await controller.Index(weapons);
+//               OkObjectResult myResult = (OkObjectResult)result;
 
-               // Assert
-               Assert.Equal(200, myResult.StatusCode);
-            }
-        }
-    }
-}
+//               // Assert
+//               Assert.Equal(200, myResult.StatusCode);
+//            }
+//        }
+//    }
+//}
