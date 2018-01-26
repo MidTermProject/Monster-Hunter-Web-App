@@ -7,6 +7,7 @@ using Newtonsoft.Json;
 
 namespace MonsterWebApp.Models
 {
+    
     public partial class Parent
     {
         [JsonProperty("id")]
@@ -57,6 +58,7 @@ namespace MonsterWebApp.Models
         [JsonProperty("materials")]
         public object Materials { get; set; }
     }
+    
 
     public partial class WeaponsResult
     {
@@ -64,7 +66,7 @@ namespace MonsterWebApp.Models
         public long Id { get; set; }
 
         [JsonProperty("parent")]
-        public Parent Parent { get; set; }
+        public WeaponsResult Parent { get; set; }
 
         [JsonProperty("hasChild")]
         public bool HasChild { get; set; }
