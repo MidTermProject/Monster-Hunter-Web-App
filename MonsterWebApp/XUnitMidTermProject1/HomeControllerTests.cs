@@ -36,8 +36,8 @@ namespace XUnitMidTermProject1
         //    // Arrange
         //    HomeController homeController = new HomeController(_context);
 
-        //    // Act
-        //    var result = homeController.Index();
+            // Act
+            var result = homeController.Index(0);
 
         //    // Assert
         //    Assert.NotNull(result);
