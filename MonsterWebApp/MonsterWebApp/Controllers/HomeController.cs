@@ -30,6 +30,10 @@ namespace MonsterWebApp.Controllers
             return View();
         }
 
+        /// <summary>
+        /// Our get all to the APIs Blade table.
+        /// </summary>
+        /// <returns>List of all available blades in API Blade table</returns>
         public async Task<IActionResult> GetBlade()
         {
             using (var client = new HttpClient())
@@ -46,6 +50,11 @@ namespace MonsterWebApp.Controllers
             }
         }
 
+        /// <summary>
+        /// Used to grab a weapon from the Blade table by id number.
+        /// </summary>
+        /// <param name="id">The unique identifier for each blade</param>
+        /// <returns>One Blade Object</returns>
         public async Task<IActionResult> GetBladeByID(int id)
         {
             using (var client = new HttpClient())
@@ -61,6 +70,32 @@ namespace MonsterWebApp.Controllers
                 return View(deserialized);
             }
         }
+        
+
+
+
+        public async Task<IActionResult> Filter(string weaponClass, string element, int rarity)
+        {
+            using (var client = new HttpClient())
+            {
+                // Update url in the following line.
+                client.BaseAddress = new Uri("http://monsterhunterapi.azurewebsites.net");
+                if (weaponClass.Contains(' '))
+                {
+                    //find and replace logic 
+                    // weaponClass = newname witih %20 
+                }
+
+                var response = await client.GetAsync($"/api/blade/{weaponClass}?element={element}?rarity={rarity}");
+                response.EnsureSuccessStatusCode();
+                var stringResult = await response.Content.ReadAsStringAsync();
+                //deserialized.
+                var deserialized = WeaponsResult.FromJson(stringResult);
+
+                return View(deserialized);
+
+            }
+        }
 
         public async Task<IActionResult> FilterBlade(string weaponClass, string element, int rarity)
         {
@@ -68,7 +103,13 @@ namespace MonsterWebApp.Controllers
             {
                 // Update url in the following line.
                 client.BaseAddress = new Uri("http://monsterhunterapi.azurewebsites.net");
-                var response = await client.GetAsync($"/api/blade/{weaponClass}?{element}?{rarity}");
+                if(weaponClass.Contains(' '))
+                {
+                    //find and replace logic 
+                    // weaponClass = newname witih %20 
+                }
+
+                var response = await client.GetAsync($"/api/blade/{weaponClass}?element={element}?rarity={rarity}");
                 response.EnsureSuccessStatusCode();
                 var stringResult = await response.Content.ReadAsStringAsync();
                 //deserialized.
@@ -78,6 +119,9 @@ namespace MonsterWebApp.Controllers
                 
             }
         }
+
+        //chain 3 methods, one for get by weapon class, one for get by element, one for get by rarity,
+        //THEN we'll go ahead and have a master method that calls them all IF all fields are accurate?
 
         //public async Task<IActionResult> FilterElement(string weaponClass, string element)
         //{
