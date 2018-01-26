@@ -14,11 +14,26 @@ namespace MonsterWebApp.Controllers
     public class AdminController : Controller
     {
         // GET: /<controller>/
-        public IActionResult Index()
+        [HttpGet]
+        public async Task<IActionResult> Index()
         {
-            return View();
+            using (var client = new HttpClient())
+            {
+                // Update url in the following line.
+                client.BaseAddress = new Uri("http://monsterhunterapi.azurewebsites.net");
+                var response = await client.GetAsync($"/api/material");
+                response.EnsureSuccessStatusCode();
+                var stringResult = await response.Content.ReadAsStringAsync();
+                //deserialized.
+                Material[] deserialized = Material.FromJson(stringResult);
+                ViewBag.Materials = deserialized;
+                WeaponsResult wr = new WeaponsResult
+                {
+                    Materials = new List<String>()
+                };
+                return View(wr);
+            }
         }
-
 
         [HttpPost]
         public async Task<IActionResult> Index(WeaponsResult weaponresult)

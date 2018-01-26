@@ -1,58 +1,85 @@
-﻿@model MonsterWebApp.Models.UserWeapons
+﻿@model MonsterWebApp.Models.WeaponsResult
 @* We need multiple fields in a form to catch input, then send the inputs as a HTTP POST to the API, we also need to serialize the info for the info getting pushed out.*@
 
 <form method="post">
 
     @*This will be based off of our Weapons Result Model. When we pass it back to the API, it should translate into their Blade Model.*@
     <label for="Name">Name</label>
-    <input maxlength="30" name="name" />
+    <input maxlength="30" name="name" required />
     <br />
-    <label for="HasChild">Has Child : Bool</label>
-    <input value="false" name="HasChild" />
+    <label for="HasChild">Can be upgraded?</label>
+    <select name="HasChild">
+        <option value="true">Yes</option>
+        <option value="false">No</option>
+    </select>
     <br />
     <label for="WeaponClass">WeaponClass</label>
-    <input maxlength="30" name="WeaponClass" />
+    <select name="WeaponClass">
+        <option value="Long Sword">Long Sword</option>
+        <option value="Great Sword">Great Sword</option>
+        <option value="Dual Blades">Dual Blades</option>
+        <option value="Poison">Poison</option>
+    </select>
     <br />
-    <label for="PurpleParent">PurpleParent</label>
+    <label for="PurpleParent">Parent Blade</label>
     <input name="PurpleParent" />
     <br />
     <label for="RawDamage">RawDamage</label>
-    <input type="number" name="RawDamage" />
+    <input type="number" minvalue="0" name="RawDamage" required />
     <br />
     <label for="Description">Description</label>
     <input maxlength="200" name="Description" />
     <br />
     <label for="ElementType">ElementType</label>
-    <input maxlength="10" name="ElementType" />
+    <select name="ElementType">
+        <option value="Fire">Fire</option>
+        <option value="Ice">Ice</option>
+        <option value="Lightning">Lightning</option>
+        <option value="Poison">Poison</option>
+    </select>
     <br />
     <label for="ElementDamage">ElementDamage</label>
-    <input type="number" maxlength="10" name="ElementDamage" />
+    <input type="number" maxlength="10" name="ElementDamage" required />
     <br />
     <label for="Sharpness">Sharpness</label>
-    <input maxlength="20" name="Sharpness" />
+    <input type="number" maxlength="20" name="Sharpness" required />
     <br />
-    <label for="affinity">affinity</label>
-    <input maxlength="10" type="number" name="affinity" />
+    <label for="affinity">Affinity</label>
+    <input maxlength="10" type="number" name="affinity" required />
     <br />
-    <label for="slots">slots</label>
-    <input maxlength="8" name="slots" />
+    <label for="slots">Slots</label>
+    <input type="number" maxlength="1" max="3" min="0" name="slots" required />
     <br />
-    <label for="defense">defense</label>
-    <input maxlength="7" name="defense" />
+    <label for="defense">Defense</label>
+    <input type="number" maxlength="7" minvalue="0" name="defense" required />
     <br />
-    <label for="imgUrl">imgUrl</label>
-    <input type="image" name="imgUrl" />
+    @*<label for="imgUrl">imgUrl</label>
+    <input type="image" name="imgUrl" />*@
     <br />
 
     @*We need to link the materials to a quantity, need 2 fields for each material?*@
-    <label for="Materials">Materials</label>
-    <input maxlength="2" name="Materials" />
-    <br />
 
-    <label for="quantity">quantity</label>
-    <input maxlength="2" name="quantity" />
-    <br />
+    <br /><br />
 
-    @*We also need to add a "add material button, for swords that require more than 2 materials.*@
-    <button type="submit">Submit</button>
+    <select id="materials" name="Materials">
+        @foreach (var i in ViewBag.Materials)
+        {
+            <option value=@i.Name>@i.Name</option>
+        }
+    </select>
+    <input type="number" maxlength="3" name="Quantity" placeholder="Quantity" />
+    <button name="add" type="button" onclick="addToList(@Model);">Add Material</button><br />
+
+    <br /><br />
+    <button type="submit">Add Weapon to Database</button><br />
+    <br /><br />
 </form>
+
+<script>
+    function addToList() {
+        $("button.add").click(function (Model) {
+            var from = $("#materials").attr("value");
+            
+        });
+    }
+</script>
