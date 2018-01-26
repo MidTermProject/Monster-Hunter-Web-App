@@ -29,19 +29,19 @@ namespace XUnitMidTermProject1
 
 
         // Testing Get
-        [Fact]
-        public void ReturnsView()
-        {
+        //[Fact]
+        //public void ReturnsView()
+        //{
 
-            // Arrange
-            HomeController homeController = new HomeController(_context);
+        //    // Arrange
+        //    HomeController homeController = new HomeController(_context);
 
-            // Act
-            var result = homeController.Index();
+        //    // Act
+        //    var result = homeController.Index();
 
-            // Assert
-            Assert.NotNull(result);
-        }
+        //    // Assert
+        //    Assert.NotNull(result);
+        //}
 
         [Fact]
         public void GetBlade_ReturnAny()

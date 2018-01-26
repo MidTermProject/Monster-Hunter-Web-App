@@ -27,7 +27,7 @@ namespace MonsterWebApp.Controllers
         }
 
         // GET: /<controller>/
-        public IActionResult Index(int? id)
+        public IActionResult Index(int? id=0)
         {
             if (id != null)
             {
