@@ -16,9 +16,9 @@
     text-decoration: none;
 }
 
-#leftfloat li {
-    list-style: none;
-}
+    #leftfloat li {
+        list-style: none;
+    }
 
 #rightfloat {
     float: right;
@@ -28,9 +28,9 @@
     width: 20%;
 }
 
-#rightfloat li {
-    list-style: none;
-}
+    #rightfloat li {
+        list-style: none;
+    }
 
 
 .topnav a:hover {
@@ -47,14 +47,14 @@
     background-image: url("Img/indexPage.jpg");
     font-family: 'Anton', sans-serif;
     font-size: 25px;
-}ody
+}
 
-    .weaponContainer h1 {
-        margin: auto;
-        line-height: 51px;
-        vertical-align: middle;
-        padding-top: 15px;
-    }
+ody .weaponContainer h1 {
+    margin: auto;
+    line-height: 51px;
+    vertical-align: middle;
+    padding-top: 15px;
+}
 
 body {
     background: #eef3e5;
@@ -95,7 +95,7 @@ body {
         list-style: none;
         margin-left: 7%;
         margin-top: 5%;
-    } 
+    }
 
 
 /* footer */
@@ -104,27 +104,15 @@ footer {
     background-color: #E7E3E3;
 }
 
-    footer nav {
-        margin: 0px auto;
-        width: 960px;
+    footer nav ul li {
+        display: inline-block;
+        text-align: center;
+
     }
-
-    footer nav ul {
-        margin: 0 auto;
-    }
-
-        footer nav ul li {
-            display: inline-block;
-            margin-right: 500px;
-            text-decoration: none;
-        }
-
-            footer ul li:first-child {
-                margin-right: 600px;
-            }
+    
 
 .fa {
-    padding: 10px;
+    padding: 5px;
     font-size: 15px;
     width: 15px;
     text-align: center;
