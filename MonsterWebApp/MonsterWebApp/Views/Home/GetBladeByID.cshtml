@@ -4,30 +4,28 @@
     Layout = "_Layout";
 }
 
+
+
 @foreach (var i in Model)
 {
-
-    <div id="detail1">
-    <br />
-    <h2>@i.Name</h2>
-    <p>Weapon Class: @i.WeaponClass</p>
-    <p>Derived From: @i.Parent</p>
-    <p>Child: @i.HasChild</p>
+    <div class="card mb-3">
+        <h3 class="card-header">@i.Name</h3>
+        <div class="card-body">
+            <h5 class="card-title">Weapon Class: @i.WeaponClass</h5>
+        </div>
+        <img display: block;" src="@i.ImgUrl"  alt="Card image">
+        <div class="card-body">
+            <p class="card-text">@i.Description</p>
+        </div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">Element Type: @i.ElementType</li>
+            <li class="list-group-item">Sharpness: @i.Sharpness</li>
+            <li class="list-group-item">Affinity: @i.Affinity</li>
+        </ul>
+        <div class="card-body">
+            <p>Materials</p>
+            <a href="#" class="card-link">@i.Materials</a>
+            @*<a href="#" class="card-link">@i.Materials</a>*@
+        </div>
     </div>
-    <div id="detail2">
-    <p>Raw Damage: @i.RawDamage</p>
-    <p>Element Type: @i.ElementType</p>
-    <p>Element Damage: @i.ElementDamage</p>
-    <p>Sharpness: @i.Sharpness</p>
-    <p>Rarity: @i.Rarity</p>
-    </div>
-    <div id="detail3">
-    <p>Affinity: @i.Affinity</p>
-    <p>Slot: @i.Slots</p>
-    <p>Defense: @i.Defense</p>
-    <p>Description: @i.Description</p>
-    <p>Materials: @i.Materials</p>
-    </div>
-    @*<td><a asp-action="Update" asp-controller="Home" asp-route-id="@i.ID">Update</a></td>*@
-
 }
