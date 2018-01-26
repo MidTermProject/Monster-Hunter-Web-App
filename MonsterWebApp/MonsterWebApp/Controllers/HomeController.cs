@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
 using System.Net.Http.Headers;
+using System.Text;
 using System.Threading.Tasks;
 using System.Web.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -74,46 +75,12 @@ namespace MonsterWebApp.Controllers
                 //deserialized.
                 var deserialized = WeaponsResult.FromJson(stringResult);
 
-                return View(deserialized);            
-                
+                return View(deserialized);
+
             }
         }
 
-        //public async Task<IActionResult> FilterElement(string weaponClass, string element)
-        //{
-        //    using (var client = new HttpClient())
-        //    {
-        //        // Update url in the following line.
-        //        client.BaseAddress = new Uri("http://monsterhunterapi.azurewebsites.net");
-        //        var response = await client.GetAsync($"/api/blade/{weaponClass}?{element}");
-        //        response.EnsureSuccessStatusCode();
-        //        var stringResult = await response.Content.ReadAsStringAsync();
-        //        //deserialized.
-        //        var deserialized = WeaponsResult.FromJson(stringResult);
-
-        //        return View(deserialized);
-
-        //    }
-        //}
-
-
-
-
-        //[HttpPost]
-        //public  async Task<Uri> CreateWeaponAsync(WeaponsResult weaponresult)
-        //{
-        //    using (var client = new HttpClient())
-        //    {
-        //        HttpResponseMessage response = await client.PostAsJsonAsync(
-        //      "api/blades", Weapons);
-        //        response.EnsureSuccessStatusCode();
-
-        //        // return URI of the created resource.
-        //        return response.Headers.Location;
-
-        //    }
-
-        //}
+    
 
 
     }
