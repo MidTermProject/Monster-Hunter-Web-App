@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,24 +15,38 @@ namespace MonsterWebApp.Controllers
     public class AdminController : Controller
     {
         // GET: /<controller>/
-        public IActionResult Index()
+        [HttpGet]
+        public async Task<IActionResult> Index()
         {
-            return View();
+            using (var client = new HttpClient())
+            {
+                // Update url in the following line.
+                client.BaseAddress = new Uri("http://monsterhunterapi.azurewebsites.net");
+                var response = await client.GetAsync($"/api/material");
+                response.EnsureSuccessStatusCode();
+                var stringResult = await response.Content.ReadAsStringAsync();
+                //deserialized.
+                Material[] deserialized = Material.FromJson(stringResult);
+                ViewBag.Materials = deserialized;
+                WeaponsResult wr = new WeaponsResult
+                {
+                    Materials = new List<String>()
+                };
+                return View(wr);
+            }
         }
-
 
         [HttpPost]
         public async Task<IActionResult> Index(WeaponsResult weaponresult)
         {
-            var serializedWeapon = Serialize.ToJson(weaponresult);
+            if (!ModelState.IsValid) return BadRequest();
+            var serializedWeapon = weaponresult.ToJson();
             var httpContent = new StringContent(serializedWeapon, Encoding.UTF8, "application/json");
 
             using (var client = new HttpClient())
-            {
-                var response = await client.PostAsync("http://monsterhunterapi.azurewebsites.net/api/blade", httpContent);
-            }
-
-            return Ok(201);
+                await client.PostAsync("http://monsterhunterapi.azurewebsites.net/api/blade", httpContent);
+            
+            return RedirectToAction("Index");
         }
     }
 }

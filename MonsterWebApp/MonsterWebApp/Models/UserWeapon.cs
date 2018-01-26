@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MonsterWebApp.Models
 {
-    public class UserWeapons
+    public class UserWeapon
     {
         public int ID { get; set; }
 
@@ -21,8 +21,5 @@ namespace MonsterWebApp.Models
 
         [Required, StringLength(50)]
         public string UserName { get; set; }
-
-
-
     }
 }

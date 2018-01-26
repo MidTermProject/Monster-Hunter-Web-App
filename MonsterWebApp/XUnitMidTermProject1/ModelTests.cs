@@ -477,7 +477,7 @@ namespace XUnitMidTermProject1
         public void WeaponID_TestingGetter_ReturnInt()
         {
             // Arrange
-            UserWeapons n = new UserWeapons();
+            UserWeapon n = new UserWeapon();
 
             // Act
             n.WeaponID = 4;
@@ -490,7 +490,7 @@ namespace XUnitMidTermProject1
         public void WeaponID_TestingSetter_ReturnInt()
         {
             // Arrange
-            UserWeapons n = new UserWeapons() { WeaponID = 6 };
+            UserWeapon n = new UserWeapon() { WeaponID = 6 };
 
             // Act
             n.WeaponID = 3;
@@ -504,7 +504,7 @@ namespace XUnitMidTermProject1
         public void UserID_TestingGetter_ReturnInt()
         {
             // Arrange
-            UserWeapons n = new UserWeapons();
+            UserWeapon n = new UserWeapon();
 
             // Act
             n.UserID = 4;
@@ -517,7 +517,7 @@ namespace XUnitMidTermProject1
         public void UserID_TestingSetter_ReturnInt()
         {
             // Arrange
-            UserWeapons n = new UserWeapons() { UserID = 6 };
+            UserWeapon n = new UserWeapon() { UserID = 6 };
 
             // Act
             n.UserID = 3;
@@ -531,7 +531,7 @@ namespace XUnitMidTermProject1
         public void WeaponName_TestingGetter_ReturnString()
         {
             // Arrange
-            UserWeapons n = new UserWeapons();
+            UserWeapon n = new UserWeapon();
 
             // Act
             n.WeaponName = "name";
@@ -544,7 +544,7 @@ namespace XUnitMidTermProject1
         public void WeaponName_TestingSetter_ReturnString()
         {
             // Arrange
-            UserWeapons n = new UserWeapons() { WeaponName = "name" };
+            UserWeapon n = new UserWeapon() { WeaponName = "name" };
 
             // Act
             n.WeaponName = "diffName";
@@ -558,7 +558,7 @@ namespace XUnitMidTermProject1
         public void UserName2_TestingGetter_ReturnString()
         {
             // Arrange
-            UserWeapons n = new UserWeapons();
+            UserWeapon n = new UserWeapon();
 
             // Act
             n.UserName = "name";
@@ -571,7 +571,7 @@ namespace XUnitMidTermProject1
         public void UserName2_TestingSetter_ReturnString()
         {
             // Arrange
-            UserWeapons n = new UserWeapons() { UserName = "name" };
+            UserWeapon n = new UserWeapon() { UserName = "name" };
 
             // Act
             n.UserName = "diffName";

@@ -15,11 +15,9 @@ namespace MonsterWebApp.Data
 
         }
 
+        public DbSet<UserModel> Users { get; set; }
         public DbSet<Weapons> Weapons { get; set; }
-
-        public DbSet<UserModel> User { get; set; }
-
-        public DbSet<UserWeapons> UserWeapons { get; set; }
+        public DbSet<UserWeapon> UserWeapons { get; set; }
 
         public static implicit operator WeaponsDbContext(HttpClient v)
         {

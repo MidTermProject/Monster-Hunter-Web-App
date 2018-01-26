@@ -1,0 +1,32 @@
+﻿<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="/"><img id="monster-hunter-logo" src="~/Img/Monster_Hunter_Logo.png">MONSTER HUNTER</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarColor02">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">About</a>
+            </li>
+        </ul>
+
+        @if (ViewData["LoggedInUserName"] != null)
+        {
+            <p>Hi @ViewData["LoggedInUserName"].ToString()!</p>
+            <p id="MyWeapons"><a asp-action="UserFavoriteWeapons" asp-controller="UserModel" asp-route-userName="@ViewData["LoggedInUserName"].ToString()"><img src="~/Img/savedweapons.png">Saved Weapons</a></p>
+        }
+        else
+        {
+            <p id="RegisterButton"><a asp-action="UserSignUp" asp-controller="UserModel" asp-route-id="">Register / Login</a></p>
+        }
+
+        <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="text" placeholder="Search">
+            <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+        </form>
+    </div>
+</nav>

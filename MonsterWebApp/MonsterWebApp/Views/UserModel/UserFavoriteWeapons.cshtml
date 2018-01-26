@@ -1,0 +1,12 @@
+﻿@model List<MonsterWebApp.Models.UserWeapon>
+
+@{
+    Layout = "_Layout";
+}
+
+<h1>List of favorite user weapons</h1>
+
+@foreach (var weapon in Model)
+{
+    <h2>@weapon.WeaponName</h2>
+}
