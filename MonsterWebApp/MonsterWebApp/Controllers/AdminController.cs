@@ -23,9 +23,7 @@ namespace MonsterWebApp.Controllers
         [HttpPost]
         public async Task<IActionResult> Index(WeaponsResult weaponresult)
         {
-            WeaponsResult[] listOfWeapons = new WeaponsResult[1];
-            listOfWeapons[0] = weaponresult;
-            var serializedWeapon = Serialize.ToJson(listOfWeapons);
+            var serializedWeapon = Serialize.ToJson(weaponresult);
             var httpContent = new StringContent(serializedWeapon, Encoding.UTF8, "application/json");
 
             using (var client = new HttpClient())
@@ -34,8 +32,6 @@ namespace MonsterWebApp.Controllers
             }
 
             return Ok(201);
-
         }
-
     }
 }
