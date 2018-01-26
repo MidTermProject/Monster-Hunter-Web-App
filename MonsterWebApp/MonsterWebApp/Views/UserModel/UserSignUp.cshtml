@@ -9,21 +9,15 @@
         <h1>Welcome Monster Hunters</h1>
     </Header>
     
-    
-    
-    <form action="post">
+    <form asp-action="UserSignUp">
         <div class="container">
-      
-                    <label><b>Login/Register</b></label><br/>
-                    <input type="text" placeholder="Enter Username" name="uname" required> <br/>
-            
-
+            <label for="UserName"><b>Login/Register</b></label><br/>
+            <input type="text" placeholder="Enter Username" name="UserName" required> <br/>
             <button id="sub" type="submit">Submit</button>
 
             <button type="button" class="cancelbtn">Cancel</button>
             <span class="psw"><a href="#"></a></span>
         </div>
-
 
         <div class="imgcontainer">
             <img src="~/img/login-image.jpg" alt="Avatar" class="avatar">
