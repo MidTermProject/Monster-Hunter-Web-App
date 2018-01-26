@@ -65,15 +65,34 @@ namespace XUnitMidTermProject1
                 HomeController controller = new HomeController(_context);
 
                 // Act
-                var result = controller.GetBladeByID(2);
+                var result = controller.GetBladeByID(2) as IActionResult;
+                var result2 = result as ViewResult;
 
                 // Assert
-                Assert.IsType<string>(result);
+                Assert.IsType<string>(result2);
+            }
+        }
+
+        [Fact]
+        public void GetBlade_CheckID_ReturnID2()
+        {
+            using (var client = new HttpClient())
+            {
+                
+                Parent parent = new Parent { Id = 2 };
+                var mock = new Mock<WeaponsDbContext>();
+
+                mock.Setup(foo => foo.something()).Returns(parent);
+                var sut = new HomeController(mock.Object);
+                var cust2 = sut.GetBladebyID(2);
+                Assert.Equal(cust.Id, cust2.Id);
+                
+               
             }
         }
 
 
-        
+
 
         /*
         [Fact]

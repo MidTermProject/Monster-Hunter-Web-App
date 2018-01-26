@@ -2,12 +2,15 @@
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-<div class="topnav">
-    <a class="active" href="#home">Home</a>
-    <a href="#weapons">Weapons</a>
-    <a href="#filter">Filter</a>
-    <a href="#about">About</a>
-</div>
+<nav class="topnav">
+    <ul id="leftfloat">
+        <li id="img"><img src="~/Img/homeimg.jpg" width="75" height="35">Monster Hunter</li>
+    </ul>
+    <ul id="rightfloat">
+        <li><a asp-action="UserSignUp" asp-controller="UserModel" asp-route-id="">Register</a></li>
+        <li><a href="#about">About</a></li>
+    </ul>
+</nav>
 
 <html>
 <head>
@@ -26,13 +29,19 @@
             @RenderBody()
         
 
-        
+
     </div>
 </body>
 
 
 </html>
-<div class="footer">
-    <a href="#" class="fa fa-facebook"></a>
-    <a href="#" class="fa fa-twitter"></a>
-</div>
+
+<footer>
+    <nav>
+        <ul>
+            <li><a href="https://www.facebook.com/monsterhunter/" class="fa fa-facebook"></a></li>
+            <li><a href="https://twitter.com/monsterhunter?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" class="fa fa-twitter"></a></li>            
+            <li><a href="https://www.youtube.com/user/monsterhunter" class="fa fa-youtube"></a></li>
+        </ul>
+    </nav>
+</footer>

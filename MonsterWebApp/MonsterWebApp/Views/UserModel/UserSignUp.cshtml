@@ -7,24 +7,26 @@
 <body>
     <Header>
         <h1>Welcome Monster Hunters</h1>
-        <p>Please create a user name for access</p>
     </Header>
+    
+    
+    
+    <form action="post">
+        <div class="container">
+      
+                    <label><b>Login/Register</b></label><br/>
+                    <input type="text" placeholder="Enter Username" name="uname" required> <br/>
+            
 
-    <form action="action_page.php">
+            <button id="sub" type="submit">Submit</button>
+
+            <button type="button" class="cancelbtn">Cancel</button>
+            <span class="psw"><a href="#"></a></span>
+        </div>
+
+
         <div class="imgcontainer">
             <img src="~/img/login-image.jpg" alt="Avatar" class="avatar">
-        </div>
-
-        <div class="container">
-            <label><b>Username</b></label>
-            <input type="text" placeholder="Enter Username" name="uname" required>
-            <button type="submit"></button>
-
-        </div>
-
-        <div class="container" style="background-color:#f1f1f1">
-            <button type="button" class="cancelbtn"></button>
-            <span class="psw"><a href="#"></a></span>
         </div>
     </form>
 </body>

@@ -1,116 +1,144 @@
 ﻿@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,800);
 
-.container {
-    display: grid;
-    grid-gap: 3px;
-    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-    grid-auto-rows: minmax(100px, 1fr);
-}
-
-}
-
-
-ul {
-    width: 100%;
-    height: 50%;
-}
-
-li {
-    background: green;
-    justify-content: center;
-    display: flex;
-    float: left;
-    width: 30%;
-    height: 30%;
-    margin: auto;
-    padding: 3%;
-}
-
-.weapons li {
-    justify-content: center;
-}
-
+/*header*/
 
 .topnav {
-    background-color: white;
+    background-color: #E7E3E3;
     overflow: hidden;
 }
 
-    .topnav a {
-        float: right;
-        color: black;
-        text-align: center;
-        padding: 14px 16px;
-        text-decoration: none;
-        font-size: 17px;
-    }
-
-
-        .topnav a:hover {
-            background-color: #ddd;
-            color: black;
-        }
-
-
-        .topnav a.active {
-            background-color: #b3ffb3;
-            color: black;
-        }
-
-/* Place the navbar at the bottom of the page, and make it stick */
-.footer {
-    background-color: white;
-    overflow: hidden;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-}
-
-    /* Style the links inside the navigation bar */
-    .footer a {
-        float: right;
-        display: inline-block;
-        color: black;
-        text-align: center;
-        padding: 14px 16px;
-        text-decoration: none;
-        font-size: 17px;
-    }
-
-        /* Change the color of links on hover */
-        .footer a:hover {
-            background-color: #ddd;
-            color: black;
-        }
-
-        /* Add a color to the active/current link */
-        .footer a.active {
-            background-color: #b3ffb3;
-            color: Black;
-        }
-
-/* Facebook */
-.fa-facebook {
-    background: #3B5998;
-    color: white;
-}
-
-/* Twitter */
-.fa-twitter {
-    background: #55ACEE;
-    color: white;
-}
-
-/* Style all font awesome icons */
-.fa {
-    padding: 20px;
-    font-size: 30px;
-    width: 50px;
+#leftfloat {
+    float: left;
     text-align: center;
+    padding: 1px 30px;
+    width: 25%;
+    font-size: 15px;
     text-decoration: none;
 }
 
-    /* Add a hover effect if you want */
+    #leftfloat li {
+        list-style: none;
+    }
+
+#rightfloat {
+    float: right;
+    text-align: center;
+    padding: 1px 30px;
+    font-size: 15px;
+    width: 20%;
+}
+
+    #rightfloat li {
+        list-style: none;
+    }
+
+
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.weaponContainer {
+    width: 100%;
+    height: 100px;
+    color: white;
+    position: center;
+    text-align: center;
+    background-image: url("Img/indexPage.jpg");
+    font-family: 'Anton', sans-serif;
+    font-size: 25px;
+}
+
+ody .weaponContainer h1 {
+    margin: auto;
+    line-height: 51px;
+    vertical-align: middle;
+    padding-top: 15px;
+}
+
+body {
+    background: #eef3e5;
+}
+
+#firstdiv {
+    clear: both;
+    margin-left: 17%
+}
+
+    #firstdiv li {
+        float: left;
+        list-style: none;
+        margin-left: 7%;
+        margin-top: 5%;
+    }
+
+#seconddiv {
+    clear: both;
+    margin-left: 17%;
+}
+
+    #seconddiv li {
+        float: left;
+        display: inline-block;
+        list-style: none;
+        margin-left: 7%;
+        margin-top: 5%;
+    }
+
+#thirddiv {
+    clear: both;
+    margin-left: 17%
+}
+
+    #thirddiv li {
+        float: left;
+        list-style: none;
+        margin-left: 7%;
+        margin-top: 5%;
+    }
+
+
+/* footer */
+footer {
+    clear: both;
+    background-color: #E7E3E3;
+}
+
+    footer nav ul li {
+        display: inline-block;
+        text-align: center;
+
+    }
+    
+
+.fa {
+    padding: 5px;
+    font-size: 15px;
+    width: 15px;
+    text-align: center;
+    text-decoration: none;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
     .fa:hover {
         opacity: 0.7;
     }
+
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+    border-radius: 50%;
+}
+
+.fa-twitter {
+    background: #55ACEE;
+    color: white;
+    border-radius: 50%;
+}
+
+.fa-youtube {
+    background: #CC181E;
+    color: white;
+    border-radius: 60%;
+}
