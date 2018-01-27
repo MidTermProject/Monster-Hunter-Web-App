@@ -11,16 +11,16 @@ This application allows the user to quickly find the item a player wants to craf
 
 ## Getting Started
 What are the steps that a user must take in order to build this app on their own machine and get it running?
-1. </br>
+1. To build this application we need to first make sure that your fron-end is communicating with your back-end...</br>
 2. </br>
 3. </br>
 4. </br>
 5. </br>
 
 ## Example
-```
-
-```
+![Pic](WeaponsLanding.png)
+![Pic](WeaponsSwords.png)
+![Pic](WeaponsAdmin.png)
 
 ## Architecture
 This application is created using ASP.NET Core 2.2 Web API applicaiton. </br>
@@ -30,9 +30,12 @@ This application is created using ASP.NET Core 2.2 Web API applicaiton. </br>
 
 
 ## Change Log
-01-21-2018 10:10am - Scaffold Front-End MVC Application </br>
-01-21-2018 05:00pm - Deploy to Azure </br>
-01-22-2018 10:00am - 
+01-22-2018 10:10am - Scaffold Front-End MVC Application </br>
+01-22-2018 05:00pm - Deploy to Azure </br>
+01-23-2018 10:00am - Create Controllers </br>
+01-24-2018 4:00pm - Communicate with back-end</br>
+01-25-2018 5:00pm - Add Testing </br> 
+01-26-2018 5:00pm - Final deploy to Azure
 
 ## License
 Licensed under the MIT license.
