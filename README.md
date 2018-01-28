@@ -18,9 +18,9 @@ What are the steps that a user must take in order to build this app on their own
 5. </br>
 
 ## Example
-```
-
-```
+![Pic](WeaponsLanding.png)
+![Pic](WeaponsSwords.png)
+![Pic](WeaponsAdmin.png)
 
 ## Architecture
 This application is created using ASP.NET Core 2.2 Web API applicaiton. </br>
