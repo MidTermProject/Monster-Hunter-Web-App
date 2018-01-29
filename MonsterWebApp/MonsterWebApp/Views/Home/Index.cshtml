@@ -7,32 +7,73 @@
 
 <div class="jumbotron">
     <h1 class="display-3">Weapon Selection</h1>
-    <p class="lead">Pick the Weapon you would like to create!</p>
+    <p class="lead">Pick the Weapon you would divke to create!</p>
 </div>
 <div class="progress">
     <div class="progress-bar bg-success" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
 </div>
 
-<div id="firstdiv" class="weapons-names">
-    <ul>
-        <li id="greatSword"><a asp-action="FilterBlade" asp-controller="Home" asp-route-weaponClass="Great Sword"><img src="~/Img/greatsword.png" alt="Great Sword" /></a> Great Sword</li>
-        <li id="longSword"><a asp-action="FilterBlade" asp-controller="Home" asp-route-weaponClass="Long Sword"><img src="~/Img/longsword.png" alt="Alternate Text" /></a> Long Sword</li>
-        <li><a href="link1.html"><img src="~/Img/dualblade.png"></a>Sword & Shield</li>
-    </ul>
+<div class="container">
+    <div class="weapons-div">
+    <div id="greatSword">
+        <a asp-action="FilterBlade" asp-controller="Home" asp-route-weaponClass="Great Sword">
+            <img src="~/Img/greatsword.png" alt="Great Sword" style="margin-top: 20%"/>
+            <p>Great Sword</p>
+        </a>
+    </div>
+    <div id="longSword">
+        <a asp-action="FilterBlade" asp-controller="Home" asp-route-weaponClass="Long Sword">
+            <img src="~/Img/longsword.png" alt="Alternate Text" />
+            <p>Long Sword</p>
+        </a>
+    </div>
+    <div>
+        <a href="#">
+            <img src="~/Img/dualblade.png">
+            <p>Sword & Shield</p>
+        </a>
+    </div>
 </div>
 
-<div id="seconddiv" class="weapons-names">
-    <ul>
-        <li><a href="link1.html"><img src="~/Img/hammer.png"></a>Hammer</li>
-        <li><a href="link1.html"><img src="~/Img/huntinghorn.png"></a>Hunting Horn</li>
-        <li><a href="link1.html"><img src="~/Img/lance.png"></a>Lance</li>
-    </ul>
+<div class="weapons-div">
+    <div>
+        <a href="#">
+            <img src="~/Img/hammer.png">
+            <p>Hammer</p>
+        </a>
+    </div>
+    <div>
+        <a href="#">
+            <img src="~/Img/huntinghorn.png">
+            <p>Hunting Horn</p>
+        </a>
+    </div>
+    <div>
+        <a href="#">
+            <img src="~/Img/lance.png">
+            <p>Lance</p>
+        </a>
+    </div>
 </div>
 
-<div id="thirddiv" class="weapons-names">
-    <ul>
-        <li><a href="link1.html"><img src="~/Img/gunlance.png"></a>Gunlance</li>
-        <li><a href="link1.html"><img src="~/Img/switchaxe.png"></a>Switch Axe</li>
-        <li><a href="link1.html"><img src="~/Img/chargeblade.png"></a>Charge Blade</li>
-    </ul>
+<div class="weapons-div">
+    <div>
+        <a href="#">
+            <img src="~/Img/gunlance.png">
+            <p>Gun Lance</p>
+        </a>
+    </div>
+    <div>
+        <a href="#">
+            <img src="~/Img/switchaxe.png" style="margin-top: 10%">
+            <p>Switch Axe</p>
+        </a>
+    </div>
+    <div>
+        <a href="#">
+            <img src="~/Img/chargeblade.png">
+            <p>Charge Blade</p>
+        </a>
+    </div>
+</div>
 </div>

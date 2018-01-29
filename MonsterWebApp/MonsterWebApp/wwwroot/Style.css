@@ -59,9 +59,12 @@
 }
 
 .container {
-    padding: 16px;
     text-align: center;
     position: center;
+}
+
+.container > div {
+    flex: 1;
 }
 
 
@@ -92,47 +95,28 @@ html, body {
     background: #FFF;
 }
 
-.weapons-names img {
-    margin-right: 5px;
+.weapons-div { 
+    clear: both; 
+    list-style: none;
+    margin: 2% 2% 2% 2%;
 }
 
-#firstdiv {
-    clear: both;
-    margin-left: 17%
+.weapons-div div {
+    float:left; 
+    width:33%;
+    min-height: 33%;
 }
 
-    #firstdiv li {
-        float: left;
-        list-style: none;
-        margin-left: 7%;
-        margin-top: 3%;
+.weapons-div img {
+    max-width: 50%;
+}
+
+    .weapons-div a {
+        font-size: 1.5rem;
+        text-decoration: none;
+        color: #363636;
+        font-family: monospace;
     }
-
-#seconddiv {
-    clear: both;
-    margin-left: 17%;
-}
-
-    #seconddiv li {
-        float: left;
-        display: inline-block;
-        list-style: none;
-        margin-left: 7%;
-        margin-top: 5%;
-    }
-
-#thirddiv {
-    clear: both;
-    margin-left: 17%
-}
-
-    #thirddiv li {
-        float: left;
-        list-style: none;
-        margin-left: 7%;
-        margin-top: 5%;
-    }
-
 
 .fa {
     padding: 5px;
@@ -151,19 +135,18 @@ html, body {
 
 
 .footer {
-    height:70px;
-    clear:both;
-    position:relative;
-    left: 0;
-    bottom: 0;
-    height: 100px;
-    width: 100%;
-    overflow: hidden;
-    position: fixed;
+    clear: both;
+    position: relative;
+    z-index: 10;
+    height: 4em;
     width: 100% !important;
 }
 
 .adminforms {
     position: relative;
-    left: 32em;
+    margin: 5% 10%;
+}
+
+#favorite-weapons-img {
+    width: 20%;
 }
