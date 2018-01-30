@@ -11,7 +11,9 @@
 </head>
 <body>
 @Html.Partial("_NavBar")
-@RenderBody()
+    <div style="min-height: 100%">
+        @RenderBody()
+    </div>
 @Html.Partial("_Footer")
 </body>
 </html>

@@ -17,7 +17,9 @@
         @if (ViewData["LoggedInUserName"] != null)
         {
             <p>Hi @ViewData["LoggedInUserName"].ToString()!</p>
-            <p id="MyWeapons"><a asp-action="UserFavoriteWeapons" asp-controller="UserModel" asp-route-userName="@ViewData["LoggedInUserName"].ToString()" a><img src="~/Img/savedweapons.png">Saved Weapons</a></p>
+            <a asp-action="UserFavoriteWeapons" asp-controller="UserModel" asp-route-userName="@ViewData["LoggedInUserName"].ToString()" a>
+                <img id="favorite-weapons-img" src="~/Img/savedweapons.png">
+            </a>
         }
         else
         {
@@ -30,14 +32,3 @@
         </form>
     </div>
 </nav>
-
-<script>
-    window.onload = function() {
-        if (@ViewData["LoggedInUserName"] != null) {
-            localStorage.setItem("userName", JSON.stringify("Hello"));
-        }
-    };
-
-</script>
-
-@*JSON.parse(localStorage.getItem('userName'));*@
