@@ -4,8 +4,9 @@
 **Version:** 1.0.0 
 
 ---
-##### *Deployed App on Azure*
-[<img src="https://raw.githubusercontent.com/MidTermProject/Monster-Hunter-Web-App/master/MonsterWebApp/MonsterWebApp/wwwroot/Img/Monster_Hunter_Logo.png" width=200px>](monsterhuntercompanion.azurewebsites.net/)
+#### *Deployed App on Azure*
+
+[<img src="https://raw.githubusercontent.com/MidTermProject/Monster-Hunter-Web-App/master/MonsterWebApp/MonsterWebApp/wwwroot/Img/Monster_Hunter_Logo.png" width=200px link>](http://monsterhuntercompanion.azurewebsites.net)
 
 ---
 
