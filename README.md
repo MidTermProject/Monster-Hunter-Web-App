@@ -3,6 +3,11 @@
 **Authors:** Andres Ibarra, Jeff Martinez, Zachary Johnson </br>
 **Version:** 1.0.0 
 
+---
+##### *Deployed App on Azure*
+[<img src="https://raw.githubusercontent.com/MidTermProject/Monster-Hunter-Web-App/master/MonsterWebApp/MonsterWebApp/wwwroot/Img/Monster_Hunter_Logo.png" width=200px>](monsterhuntercompanion.azurewebsites.net/)
+
+---
 
 ## Overview
 Players in the <i>Monster Hunter</i> games do extensive research on weapons and armor in order to figure out what is required to craft them. There are many different types of weapons and armory with different properties that make them more effective to different monsters. Monster Hunter Players need an easy way to compare different equipment, and then decide which one to pursue. This involves collecting items and crafting the pre-requisite equipment. 
